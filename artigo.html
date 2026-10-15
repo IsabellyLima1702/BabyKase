@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./artigo.css">
+
+    <title>Artigos e Orientações</title>
+</head>
+
+<body>
+
+    <!-- DETALHE SUPERIOR -->
+    <header class="detalheCima">
+        <img
+            src="img/Fundo Cima.png"
+            alt="Detalhe superior"
+        >
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="cadastro">
+
+        <div class="inputs">
+
+            <!-- LOGO -->
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+
+
+            <!-- TÍTULO -->
+            <div class="titulo">
+                <h1>
+                    Artigos e Orientações
+                </h1>
+            </div>
+
+
+            <!-- SEPARAÇÃO -->
+            <div class="separacao">
+                <img
+                    src="./img/separacao.png"
+                    alt="Separador"
+                >
+            </div>
+
+
+            <!-- DESCRIÇÃO -->
+            <div class="descricao">
+                <h3>
+                    Conteúdos confiáveis para te informar e cuidar ainda melhor.
+                </h3>
+            </div>
+
+
+            <!-- ÁREA DOS ARTIGOS -->
+            <section class="container">
+
+                <!-- BUSCA -->
+                <section class="search-area">
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="🔎 Buscar artigos..."
+                        aria-label="Buscar artigos"
+                    >
+
+                </section>
+
+
+                <!-- FILTROS -->
+                <nav
+                    class="filters"
+                    aria-label="Filtros de artigos"
+                >
+
+                    <button
+                        class="filter active"
+                        data-category="Todos"
+                        type="button"
+                    >
+                        Todos
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-category="Amamentação"
+                        type="button"
+                    >
+                        Amamentação
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-category="Sono"
+                        type="button"
+                    >
+                        Sono
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-category="Alimentação"
+                        type="button"
+                    >
+                        Alimentação
+                    </button>
+
+                    <button
+                        class="filter"
+                        data-category="Saúde"
+                        type="button"
+                    >
+                        Saúde
+                    </button>
+
+                </nav>
+
+
+                <!-- CARDS DOS ARTIGOS -->
+                <section
+                    id="articlesContainer"
+                    class="cards"
+                    aria-label="Lista de artigos"
+                ></section>
+
+
+                <!-- MENSAGEM QUANDO NÃO ENCONTRAR -->
+                <div
+                    id="noResults"
+                    class="no-results"
+                    style="display: none;"
+                >
+
+                    <h2>
+                        Nenhum artigo encontrado
+                    </h2>
+
+                    <p>
+                        Tente pesquisar por outro termo.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- DETALHE INFERIOR -->
+    <div class="detalheBaixo">
+
+        <img
+            src="img/Fundo baixo.png"
+            alt="Detalhe inferior"
+        >
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="artigo.js"></script>
+
+</body>
+
+</html>

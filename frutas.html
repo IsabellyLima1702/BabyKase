@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./frutas.css">
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <header class="detalheCima">
+        <img src="img/Fundo Cima.png" alt="Detalhe superior">
+    </header>
+
+    <main class="cadastro">
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+          
+        </div>
+
+    <div class="campo">
+        <h1>Tamanho do  seu bebê</h1>
+    </div>
+
+    <div class="divisao">
+        <img
+        class="divisao" 
+        src="img/separacao.png" 
+        alt="divisao">
+    </div>
+
+    <div class="texto">
+        <h3>Acompanhe o desenvolvimento do seu bebê semana a semana ❤️</h3>
+    </div>
+
+    <div class="gestacao">
+        <span class="titulo">Estou com:</span>
+
+        <div class="select-container">
+            <select id="semanas">
+                <option value="4">  4 semanas</option>
+                <option value="8">  8 semanas</option>
+                <option value="12">12 semanas</option>
+                <option value="16">16 semanas</option>
+                <option value="20" selected>20 semanas</option>
+                <option value="24">24 semanas</option>
+                <option value="28">28 semanas</option>
+                <option value="32">32 semanas</option>
+                <option value="36">36 semanas</option>
+                <option value="40">40 semanas</option>
+
+            </select>
+        </div>
+    </div>
+
+    <div class="pagina-bebe">
+
+  <!-- CARD PRINCIPAL -->
+  <section class="card-bebe">
+
+    <button class="favorito">♡</button>
+
+    <img
+      id="imagemFruta"
+      class="fruta"
+      src="img/banana.png"
+      alt="Banana"
+    >
+
+    <p class="descricao">
+      Seu bebê está do tamanho de uma
+    </p>
+
+    <h1 id="nomeFruta">banana</h1>
+
+    <div class="tamanho">
+      <span>📏</span>
+      <span id="tamanho">Aproximadamente 25 cm</span>
+    </div>
+
+  </section>
+
+
+  <!-- SELETOR DE SEMANAS -->
+  <section class="seletor-semanas">
+
+    <p>
+      Veja o tamanho do seu bebê nas semanas
+    </p>
+
+    <div class="linha-semanas">
+
+      <button class="semana" data-semana="4">4</button>
+      <button class="semana" data-semana="8">8</button>
+      <button class="semana" data-semana="12">12</button>
+      <button class="semana" data-semana="16">16</button>
+      <button class="semana" data-semana="20">20</button>
+      <button class="semana" data-semana="24">24</button>
+      <button class="semana" data-semana="28">28</button>
+      <button class="semana" data-semana="32">32</button>
+      <button class="semana" data-semana="36">36</button>
+      <button class="semana" data-semana="40">40</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- INFORMAÇÕES -->
+  <section id="informacoes" class="informacoes">
+  </section>
+
+</div>
+
+    </main>
+
+    <div class="detalheBaixo">
+
+        <img
+            src="img/Fundo baixo.png"
+            alt="Detalhe inferior"
+        >
+
+    </div>
+
+    <script src="./frutas.js"></script>
+
+</body>
+
+</html>

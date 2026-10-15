@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./recuperar.css">
+
+    <title>Nova Senha</title>
+</head>
+
+<body>
+
+    <header class="detalheCima">
+        <img src="img/Fundo Cima.png" alt="Detalhe superior">
+    </header>
+
+    <main class="cadastro">
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+
+            <div class="nova">
+                <p>Nova Senha:</p>
+            </div>
+
+            <div class="campo">
+                <input
+                    type="password"
+                    id="nova"
+                    placeholder="******"
+                >
+            </div>
+
+            <div class="confirmar">
+                <p>Confirmar Senha:</p>
+            </div>
+
+           <div class="campo senha-campo">
+                <input 
+                    type="password" 
+                    id="confirmar" 
+                    placeholder="******"
+                >  
+            </div>
+
+        </div>
+
+       <button id="botao" onclick="alterarSenha()">
+            Alterar Senha
+        </button>
+
+    </main>
+
+    <div class="detalheBaixo">
+
+        <img
+            src="img/Fundo baixo.png"
+            alt="Detalhe inferior"
+        >
+
+    </div>
+
+    <script src="./recuperar.js"></script>
+
+</body>
+
+</html>

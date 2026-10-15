@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: rgb(250, 229, 225); 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    /*
+        Espaço para o conteúdo não ficar
+        em cima dos detalhes de fundo.
+    */
+    padding: 40px 20px 180px;
+    /*
+        Evita barra horizontal caso as imagens
+        ultrapassem alguns pixels da viewport.
+    */
+    overflow-x: hidden;
+}
+
+/* ================================================= */
+/* FUNDO DE CIMA */
+/* ================================================= */
+
+.detalheCima {
+    position: fixed;
+    top: 0;
+    left:0;
+    width:20vw;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.detalheCima img {
+    display: block;
+    width: 250px;
+    height: 350px;
+    max-width: none;
+}
+
+/* ================================================= */
+/* ÁREA PRINCIPAL */
+/* ================================================= */
+
+.cadastro {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================================================= */
+/* LOGO */
+/* ================================================= */
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ================================================= */
+/* INPUTS */
+/* ================================================= */
+
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* ================================================= */
+/* CAMPOS */
+/* ================================================= */
+
+.campo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.campo input {
+    width: 80%;
+    max-width: 450px;
+    height: 50px;
+    border: 2px solid #fd9999;
+    border-radius: 15px;
+    padding: 0 20px 0 55px;
+    font-size: 18px;
+    outline: none;
+    background-color: white;
+
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    background-size: 25px 25px;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.campo input:focus {
+    border-color: #d66b58;
+    box-shadow: 0 0 0 3px rgba(214, 107, 88, 0.12);
+}
+
+#email {
+    background-image: url("img/Carta.png");
+}
+
+/* ================================================= */
+/* BOTÃO */
+/* ================================================= */
+
+#botao {
+    width: 75%;
+    height: 60px;
+    margin-top: 40px;
+    border: 2px solid #fd9999;
+    border-radius: 15px;
+    background-color: rgb(219, 110, 89);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+        opacity 0.2s,
+        transform 0.2s;
+    margin-bottom: 30px;
+}
+
+#botao:hover {
+    opacity: 0.9;
+
+    transform: translateY(-2px);
+}
+
+#botao:active {
+    transform: translateY(0);
+}
+
+/* ================================================= */
+/* BOTÃO VOLTAR */
+/* ================================================= */
+
+.voltar {
+    position: fixed;
+
+    top: 25px;
+    left: 25px;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #d65b40;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.voltar .seta {
+    font-size: 32px;
+    font-weight: normal;
+
+    line-height: 1;
+}
+
+/* ================================================= */
+/* LOGIN */
+/* ================================================= */
+
+.login {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 0;
+
+    text-align: center;
+
+    flex-wrap: wrap;
+}
+
+.login h3 {
+    font-size: 18px;
+
+    color: #535151;
+}
+
+.login h2 {
+    font-size: 18px;
+
+    color: rgb(219, 110, 89);
+
+    cursor: pointer;
+}
+
+
+/* ================================================= */
+/* FUNDO DE BAIXO */
+/* ================================================= */
+
+.detalheBaixo {
+    position: fixed;
+    bottom: 0;
+    left: 80vw;
+    width: 20vw;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.detalheBaixo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+}
+
+/* ================================================= */
+/* TABLETS E CELULARES */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 20px 130px;
+    }
+
+
+    /* ============================== */
+    /* LOGO */
+    /* ============================== */
+
+    .logo {
+        width: 250px;
+        height: auto;
+    }
+
+    .logo-container {
+        margin-bottom: 30px;
+    }
+
+
+    /* ============================== */
+    /* INPUTS */
+    /* ============================== */
+
+    .inputs {
+        gap: 18px;
+    }
+
+
+    /* ============================== */
+    /* CAMPOS */
+    /* ============================== */
+
+    .campo input {
+        width: 100%;
+
+        height: 58px;
+
+        font-size: 16px;
+
+        border-radius: 12px;
+    }
+
+    /* ============================== */
+    /* BOTÃO */
+    /* ============================== */
+
+    #botao {
+        width: 100%;
+        max-width: 300px;
+
+        height: 55px;
+
+        margin-top: 30px;
+
+        font-size: 16px;
+    }
+
+
+}
+
+/* ================================================= */
+/* CELULARES PEQUENOS */
+/* ================================================= */
+
+@media (max-width: 350px) {
+
+    body {
+        padding: 20px 15px 110px;
+    }
+
+    /* ============================== */
+    /* LOGO */
+    /* ============================== */
+
+    .logo {
+        width: 220px;
+        height: auto;
+    }
+
+    /* ============================== */
+    /* CAMPOS */
+    /* ============================== */
+
+    .campo input {
+        height: 52px;
+
+        font-size: 15px;
+    }
+}
+
+/* ================================================= */
+/* TELAS MUITO ALTAS / GRANDES */
+/* ================================================= */
+
+@media (min-width: 1200px) {
+
+    .cadastro {
+        max-width: 600px;
+    }
+
+    .logo {
+        width: 350px;
+        height: auto;
+    }
+}

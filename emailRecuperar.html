@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./emailRecuperar.css">
+
+    <title>Email Recuperação</title>
+</head>
+
+<body>
+
+    <header class="detalheCima">
+        <img src="img/Fundo Cima.png" alt="Detalhe superior">
+    </header>
+
+    <main class="cadastro">
+
+        <a href="login.html" class="voltar">
+            <span class="seta">←</span>
+            <span>Voltar</span>
+        </a>
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email de Recuperação"
+                >
+            </div>
+
+        </div>
+
+       <button 
+            id="botao" 
+            onclick="window.location.href='verificar.html'">Enviar Código</button
+        >
+
+        <div class="login">
+
+            <h3> 
+                Não possui uma conta? 
+            </h3>
+
+            <h2 onclick="window.location.href='cadastroUsuario.html'"> 
+                Cadastre-se 
+            </h2>
+
+        </div>
+
+    </main>
+
+    <div class="detalheBaixo">
+
+        <img
+            src="img/Fundo baixo.png"
+            alt="Detalhe inferior"
+        >
+
+    </div>
+
+    <script src="./emailRecuperar.js"></script>
+
+</body>
+
+</html>

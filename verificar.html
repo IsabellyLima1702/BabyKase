@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./verificar.css">
+
+    <title>Verificar Código</title>
+</head>
+
+<body>
+
+    <header class="detalheCima">
+        <img src="img/Fundo Cima.png" alt="Detalhe superior">
+    </header>
+
+    <main class="cadastro">
+
+        <a href="login.html" class="voltar">
+            <span class="seta">←</span>
+            <span>Voltar</span>
+        </a>
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+
+            <div class="verificar">
+                <h2>Verificar Código</h2>
+            </div>
+
+            <div class="recebido">
+                <p>Código recebido:</p>
+            </div>
+
+            <div class="codigo">
+                <input type="text" maxlength="1" inputmode="numeric">
+                <input type="text" maxlength="1" inputmode="numeric">
+                <input type="text" maxlength="1" inputmode="numeric">
+                <input type="text" maxlength="1" inputmode="numeric">
+            </div>
+
+        </div>
+
+        <button
+            id="botao"
+            onclick="window.location.href='recuperar.html'">
+            Confirmar
+        </button>
+
+        <div class="login">
+
+            <h3>
+                Não possui uma conta?
+            </h3>
+
+            <h2 onclick="window.location.href='cadastroUsuario.html'">
+                Cadastre-se
+            </h2>
+
+        </div>
+
+    </main>
+
+    <div class="detalheBaixo">
+        <img
+            src="img/Fundo baixo.png"
+            alt="Detalhe inferior"
+        >
+    </div>
+
+</body>
+
+</html>

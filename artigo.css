@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: rgb(250, 229, 225); 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    /*
+        Espaço para o conteúdo não ficar
+        em cima dos detalhes de fundo.
+    */
+    padding: 40px 20px 180px;
+    /*
+        Evita barra horizontal caso as imagens
+        ultrapassem alguns pixels da viewport.
+    */
+    overflow-x: hidden;
+}
+
+/* ================================================= */
+/* FUNDO DE CIMA */
+/* ================================================= */
+
+.detalheCima {
+    position: fixed;
+    top: 0;
+    left:0;
+    width:20vw;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.detalheCima img {
+    display: block;
+    width: 250px;
+    height: 350px;
+    max-width: none;
+}
+
+
+/* ================================================= */
+/* ÁREA PRINCIPAL */
+/* ================================================= */
+
+.cadastro {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ================================================= */
+/* LOGO */
+/* ================================================= */
+
+.logo-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ================================================= */
+/* TÍTULO */
+/* ================================================= */
+
+.titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #d66b58;
+}
+
+/* ================================================= */
+/* INPUTS */
+/* ================================================= */
+
+.inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* ================================================= */
+/* SEPARAÇÃO */
+/* ================================================= */
+
+.separacao {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: -50px;
+    flex-wrap: wrap;
+}
+
+.separacao img {
+    display: block;
+    width: 330px;
+    height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* ================================================= */
+/* DESCRIÇÃO */
+/* ================================================= */
+
+.descricao {
+    width: 50%;
+    max-width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: -50px;
+    flex-wrap: wrap;
+    font-size: 15px;
+    color: rgb(48, 47, 47);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* ================================================= */
+/* FUNDO DE BAIXO */
+/* ================================================= */
+
+.detalheBaixo {
+    position: fixed;
+    bottom: 0;
+    left: 80vw;
+    width: 20vw;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.detalheBaixo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+
+/* HEADER */
+
+.header {
+    padding: 50px 0;
+    background: #f5dfe6;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 17px;
+    color: #666;
+}
+
+
+/* BUSCA */
+
+.search-area {
+    margin: 35px 0 20px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 16px 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.search-area input:focus {
+    border-color: #d58aa0;
+}
+
+
+/* FILTROS */
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.filter {
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    background: #eee;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.filter:hover {
+    transform: translateY(-2px);
+}
+
+.filter.active {
+    background: #d58aa0;
+    color: white;
+}
+
+
+/* GRID DOS CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(270px, 1fr));
+
+    gap: 25px;
+
+    padding-bottom: 50px;
+}
+
+
+/* CARD */
+
+.card {
+    background: white;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.25s,
+                box-shadow 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* IMAGEM */
+
+.card-image {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* CONTEÚDO */
+
+.card-content {
+    padding: 20px;
+}
+
+
+/* CATEGORIA */
+
+.category {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: #f5dfe6;
+
+    color: #a44d68;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+
+/* TÍTULO */
+
+.card h2 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+
+    line-height: 1.3;
+}
+
+
+/* DESCRIÇÃO */
+
+.card p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 18px;
+}
+
+
+/* BOTÃO */
+
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.read-more:hover {
+    background: #555;
+}
+
+
+/* SEM RESULTADOS */
+
+.no-results {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #777;
+}
+
+.no-results h2 {
+    margin-bottom: 10px;
+}
+
+/* ================================================= */
+/* TABLETS E CELULARES */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 20px 130px;
+    }
+
+
+    /* ============================== */
+    /* LOGO */
+    /* ============================== */
+
+    .logo {
+        width: 250px;
+        height: auto;
+    }
+
+    .logo-container {
+        margin-bottom: 30px;
+    }
+
+
+    /* ============================== */
+    /* INPUTS */
+    /* ============================== */
+
+    .inputs {
+        gap: 18px;
+    }
+
+
+    /* ============================== */
+    /* CAMPOS */
+    /* ============================== */
+
+    .campo input {
+        width: 100%;
+
+        height: 58px;
+
+        font-size: 16px;
+
+        border-radius: 12px;
+    }
+
+
+    /* ============================== */
+    /* MARCAS */
+    /* ============================== */
+
+    .marcas {
+        gap: 15px;
+    }
+
+    .marcas img {
+        width: 50px;
+        height: 50px;
+    }
+    /* ============================== */
+    /* BOTÃO */
+    /* ============================== */
+
+    #botao {
+        width: 100%;
+        max-width: 300px;
+
+        height: 55px;
+
+        margin-top: 30px;
+
+        font-size: 16px;
+    }
+
+
+    /* ============================== */
+    /* LOGIN */
+    /* ============================== */
+
+    .login {
+        margin-top: 25px;
+    }
+
+    .login h3,
+    .login h2 {
+        font-size: 16px;
+    }
+}
+
+/* ================================================= */
+/* CELULARES PEQUENOS */
+/* ================================================= */
+
+@media (max-width: 350px) {
+
+    body {
+        padding: 20px 15px 110px;
+    }
+
+    /* ============================== */
+    /* LOGO */
+    /* ============================== */
+
+    .logo {
+        width: 220px;
+        height: auto;
+    }
+
+    /* ============================== */
+    /* CAMPOS */
+    /* ============================== */
+
+    .campo input {
+        height: 52px;
+
+        font-size: 15px;
+    }
+
+    /* ============================== */
+    /* LOGIN */
+    /* ============================== */
+
+    .login {
+        flex-direction: column;
+
+        gap: 3px;
+    }
+}
+
+/* ================================================= */
+/* TELAS MUITO ALTAS / GRANDES */
+/* ================================================= */
+
+@media (min-width: 1200px) {
+
+    .cadastro {
+        max-width: 600px;
+    }
+
+    .logo {
+        width: 350px;
+        height: auto;
+    }
+}

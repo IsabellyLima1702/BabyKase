@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./cadastroResponsavel.css">
+
+    <title>Cadastro Responsável</title>
+</head>
+
+<body>
+
+    <header class="detalheCima">
+        <img src="img/Fundo Cima.png" alt="Detalhe superior">
+    </header>
+
+    <main class="cadastro">
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+
+            <div class="responsavel">
+                <h2>Cadastro do Responsável</h2>
+            </div>
+
+            <div class="campo">
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Nome:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="date"
+                    id="data"
+                    placeholder="Data de nascimento:"
+                >
+            </div>
+
+           <div class="campo senha-campo">
+                <input 
+                    type="text" 
+                    id="cpf" 
+                    placeholder="CPF:"
+                >  
+            </div>
+
+            <div class="campo">
+                <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="Telefone:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="text"
+                    id="endereco"
+                    placeholder="Endereço:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="text"
+                    id="perfil"
+                    placeholder="Perfil profiliático:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="text"
+                    id="historico"
+                    placeholder="Histórico de clínico gestacional:"
+                >
+            </div>
+
+            <div class="marcas">
+
+                <img
+                    class="google"
+                    src="img/google.png"
+                    alt="Google"
+                >
+
+                <img
+                    class="mac"
+                    src="img/apple.png"
+                    alt="Mac"
+                >
+
+                <img
+                    class="face"
+                    src="img/facebook.png"
+                    alt="Facebook"
+                >
+
+            </div>
+
+        </div>
+
+        <button id="botao" onclick="register()">Próximo</button>
+
+        <div class="login">
+
+            <h3>
+                Já possui uma conta?
+            </h3>
+
+            <h2 onclick="window.location.href='login.html'"> 
+                Login 
+            </h2>
+
+        </div>
+
+    </main>
+
+    <div class="detalheBaixo">
+
+        <img
+            src="img/Fundo baixo.png"
+            alt="Detalhe inferior"
+        >
+
+    </div>
+
+    <script src="./cadastroResponsavel.js"></script>
+
+</body>
+
+</html>

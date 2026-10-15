@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./cadastroCrianca.css">
+
+    <title>Cadastro Bebê</title>
+</head>
+
+<body>
+
+    <header class="detalheCima">
+        <img src="img/Fundo Cima.png" alt="Detalhe superior">
+    </header>
+
+    <main class="cadastro">
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+
+            <div class="crianca">
+                <h2>Cadastro da Criança</h2>
+            </div>
+
+
+            <div class="campo">
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Nome:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="date"
+                    id="data"
+                    placeholder="Data de nascimento:"
+                >
+            </div>
+
+           <div class="campo senha-campo">
+                <input 
+                    type="text" 
+                    id="sexo" 
+                    placeholder="Sexo:"
+                >  
+            </div>
+
+            <div class="campo">
+                <input
+                    type="number"
+                    id="peso"
+                    placeholder="Peso:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="number"
+                    id="altura"
+                    placeholder="Altura:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="text"
+                    id="obs"
+                    placeholder="Observatório:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="text"
+                    id="comorbidades"
+                    placeholder="Comorbidades:"
+                >
+            </div>
+
+            <div class="marcas">
+
+                <img
+                    class="google"
+                    src="img/google.png"
+                    alt="Google"
+                >
+
+                <img
+                    class="mac"
+                    src="img/mac.png"
+                    alt="Mac"
+                >
+
+                <img
+                    class="face"
+                    src="img/facebook.png"
+                    alt="Facebook"
+                >
+
+            </div>
+
+        </div>
+
+        <button id="botao" onclick="register()">Salvar</button>
+
+        <div class="login">
+
+            <h3>
+                Já possui uma conta?
+            </h3>
+
+            <h2 onclick="window.location.href='login.html'"> 
+                Login 
+            </h2> 
+
+        </div>
+
+    </main>
+
+    <div class="detalheBaixo">
+
+        <img
+            src="img/Fundo baixo.png"
+            alt="Detalhe inferior"
+        >
+
+    </div>
+
+    <script src="./cadastroCrianca.js"></script>
+
+</body>
+
+</html>

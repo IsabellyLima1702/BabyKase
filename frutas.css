@@ -1,0 +1,1050 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: rgb(250, 229, 225);
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+
+    color: #54352c;
+
+    overflow-x: hidden;
+
+    padding:
+        40px
+        20px
+        180px;
+}
+
+
+/* =========================================
+   FUNDO SUPERIOR
+========================================= */
+
+.detalheCima {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 250px;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+.detalheCima img {
+    display: block;
+
+    width: 250px;
+    height: auto;
+}
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.cadastro {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.inputs {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.logo-container {
+
+    width: 200px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+
+.logo {
+
+    display: block;
+
+    width: 200px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.campo {
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        Times,
+        serif;
+
+    font-size: 15px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   DIVISÃO
+========================================= */
+
+.divisao {
+
+    width: 230px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 10px;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.texto {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: rgb(94, 96, 102);
+
+    font-family:
+        'Trebuchet MS',
+        'Lucida Sans Unicode',
+        'Lucida Grande',
+        'Lucida Sans',
+        Arial,
+        sans-serif;
+
+    margin-bottom: 20px;
+
+    font-size: 15px;
+}
+
+
+.texto h3 {
+    font-weight: 500;
+}
+
+
+/* =========================================
+   SELETOR DE GESTAÇÃO
+========================================= */
+
+.gestacao {
+
+    width: min(100%, 550px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 10px;
+
+    border: 2px solid #f0dfd9;
+
+    border-radius: 15px;
+
+    background-color: #fffaf8;
+}
+
+
+.titulo {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #4d2d22;
+
+    margin-left: 10px;
+
+    white-space: nowrap;
+}
+
+
+.select-container {
+
+    position: relative;
+
+    width: 220px;
+
+    flex-shrink: 0;
+}
+
+
+#semanas {
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    width: 100%;
+
+    height: 45px;
+
+    padding:
+        0
+        55px
+        0
+        25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #d77e63;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+
+#semanas:focus {
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(215, 126, 99, 0.25);
+}
+
+
+/* =========================================
+   SETA DO SELECT
+========================================= */
+
+.select-container::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 50%;
+
+    width: 12px;
+
+    height: 12px;
+
+    border-right:
+        3px solid white;
+
+    border-bottom:
+        3px solid white;
+
+    transform:
+        translateY(-65%)
+        rotate(45deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   PÁGINA DO BEBÊ
+========================================= */
+
+.pagina-bebe {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 30px 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   CARD PRINCIPAL
+========================================= */
+
+.card-bebe {
+
+    position: relative;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 35px;
+
+    padding:
+        40px
+        30px
+        35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px
+        rgba(80, 50, 40, 0.08);
+}
+
+
+.fruta {
+
+    width: min(70%, 500px);
+
+    height: 380px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+
+.descricao {
+
+    margin-top: 10px;
+
+    color: #b3654e;
+
+    font-size: clamp(18px, 3vw, 23px);
+}
+
+
+.card-bebe h1 {
+
+    margin:
+        5px 0 20px;
+
+    font-family: cursive;
+
+    font-size:
+        clamp(40px, 7vw, 55px);
+
+    font-weight: normal;
+
+    color: #d47d63;
+}
+
+
+/* =========================================
+   FAVORITO
+========================================= */
+
+.favorito {
+
+    position: absolute;
+
+    top: 30px;
+
+    right: 35px;
+
+    width: 65px;
+
+    height: 65px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #d47d63;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   TAMANHO
+========================================= */
+
+.tamanho {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    max-width: 100%;
+
+    background: #fff0ea;
+
+    padding:
+        15px
+        30px;
+
+    border-radius: 20px;
+
+    font-size:
+        clamp(16px, 3vw, 22px);
+}
+
+
+/* =========================================
+   SELETOR DE SEMANAS
+========================================= */
+
+.seletor-semanas {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding:
+        25px
+        20px;
+
+    border-radius: 25px;
+
+    background: #fff0e9;
+
+    text-align: center;
+}
+
+
+.seletor-semanas p {
+
+    margin-bottom: 20px;
+
+    font-size:
+        clamp(17px, 3vw, 21px);
+}
+
+
+/* =========================================
+   LINHA DAS SEMANAS
+========================================= */
+
+.linha-semanas {
+
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+    padding:
+        10px
+        0;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+
+.linha-semanas::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Linha tracejada */
+
+.linha-semanas::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 30px;
+
+    right: 30px;
+
+    border-top:
+        2px dashed #e8b9a9;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   BOTÕES DAS SEMANAS
+========================================= */
+
+.semana {
+
+    position: relative;
+
+    z-index: 1;
+
+    flex-shrink: 0;
+
+    width: 60px;
+
+    height: 60px;
+
+    border:
+        4px solid white;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #754c40;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.semana:hover {
+
+    transform: scale(1.05);
+}
+
+
+.semana.ativo {
+
+    background: #d47d63;
+
+    color: white;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.informacoes {
+
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+
+.info-card {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: #f4f3ed;
+
+    border-radius: 25px;
+
+    padding:
+        20px 25px;
+
+    margin-bottom: 12px;
+}
+
+
+.info-icone {
+
+    flex-shrink: 0;
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dfe8d8;
+
+    font-size: 30px;
+}
+
+
+.info-texto {
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   FUNDO INFERIOR
+========================================= */
+
+.detalheBaixo {
+
+    position: fixed;
+
+    bottom: 0;
+
+    right: 0;
+
+    width: 250px;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+.detalheBaixo img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+
+        padding:
+            30px
+            15px
+            130px;
+    }
+
+
+    .cadastro {
+
+        max-width: 700px;
+    }
+
+
+    .fruta {
+
+        width: 75%;
+
+        height: 300px;
+    }
+
+
+    .card-bebe {
+
+        padding:
+            30px
+            20px
+            30px;
+    }
+
+
+    .linha-semanas {
+
+        justify-content: flex-start;
+
+        padding-left: 5px;
+
+        padding-right: 5px;
+    }
+
+
+    .linha-semanas::before {
+
+        left: 35px;
+
+        right: 35px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding:
+            20px
+            12px
+            100px;
+    }
+
+
+    .detalheCima {
+
+        width: 120px;
+    }
+
+
+    .detalheCima img {
+
+        width: 120px;
+    }
+
+
+    .detalheBaixo {
+
+        width: 150px;
+    }
+
+
+    .logo {
+
+        width: 180px;
+    }
+
+
+    .campo {
+
+        font-size: 13px;
+    }
+
+
+    .texto {
+
+        padding: 0 10px;
+
+        font-size: 14px;
+    }
+
+
+    /* -------------------------
+       SELECT
+    ------------------------- */
+
+    .gestacao {
+
+        width: 100%;
+
+        gap: 10px;
+
+        padding: 8px;
+    }
+
+
+    .titulo {
+
+        font-size: 16px;
+
+        margin-left: 5px;
+    }
+
+
+    .select-container {
+
+        width: 170px;
+    }
+
+
+    #semanas {
+
+        height: 42px;
+
+        font-size: 16px;
+
+        padding-left: 15px;
+    }
+
+
+    /* -------------------------
+       CARD
+    ------------------------- */
+
+    .pagina-bebe {
+
+        padding:
+            20px
+            0;
+    }
+
+
+    .card-bebe {
+
+        border-radius: 25px;
+
+        padding:
+            25px
+            15px
+            25px;
+    }
+
+
+    .fruta {
+
+        width: 90%;
+
+        height: 240px;
+    }
+
+
+    .favorito {
+
+        top: 15px;
+
+        right: 15px;
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 27px;
+    }
+
+
+    .tamanho {
+
+        width: 100%;
+
+        padding:
+            12px
+            15px;
+    }
+
+
+    /* -------------------------
+       SEMANAS
+    ------------------------- */
+
+    .seletor-semanas {
+
+        padding:
+            20px
+            12px;
+    }
+
+
+    .linha-semanas {
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        gap: 12px;
+
+        padding:
+            10px
+            8px;
+    }
+
+
+    .linha-semanas::before {
+
+        left: 38px;
+
+        right: 38px;
+    }
+
+
+    .semana {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 16px;
+    }
+
+
+    /* -------------------------
+       INFORMAÇÕES
+    ------------------------- */
+
+    .info-card {
+
+        align-items: flex-start;
+
+        padding:
+            15px;
+
+        gap: 12px;
+
+        border-radius: 20px;
+    }
+
+
+    .info-icone {
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 23px;
+    }
+
+
+    .info-texto {
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   CELULARES MUITO PEQUENOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    body {
+
+        padding-left: 8px;
+
+        padding-right: 8px;
+    }
+
+
+    .gestacao {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .titulo {
+
+        text-align: center;
+
+        margin: 5px 0;
+    }
+
+
+    .select-container {
+
+        width: 100%;
+    }
+
+
+    .fruta {
+
+        height: 210px;
+    }
+
+
+    .seletor-semanas p {
+
+        font-size: 15px;
+    }
+
+
+    .semana {
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 15px;
+    }
+}

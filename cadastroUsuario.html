@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./cadastroUsuario.css">
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <header class="detalheCima">
+        <img src="img/Fundo Cima.png" alt="Detalhe superior">
+    </header>
+
+    <main class="cadastro">
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Nome:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email:"
+                >
+            </div>
+
+           <div class="campo senha-campo">
+                <input 
+                    type="password" 
+                    id="senha" 
+                    placeholder="Senha:"
+                >  
+            </div>
+
+            <div class="campo">
+                <input
+                    type="password"
+                    id="premium"
+                    placeholder="Confirmar senha:"
+                >
+            </div>
+
+            <div class="marcas">
+
+                <img
+                    class="google"
+                    src="img/google.png"
+                    alt="Google"
+                >
+
+                <img
+                    class="mac"
+                    src="img/mac.png"
+                    alt="Mac"
+                >
+
+                <img
+                    class="face"
+                    src="img/facebook.png"
+                    alt="Facebook"
+                >
+
+            </div>
+
+        </div>
+
+        <button id="botao" onclick="register()">Próximo</button>
+
+        <div class="login"> 
+
+    <h3> 
+        Já possui uma conta? 
+    </h3> 
+
+    <h2 onclick="window.location.href='login.html'"> 
+        Login 
+    </h2> 
+
+</div>
+
+    </main>
+
+    <div class="detalheBaixo">
+
+        <img
+            src="img/Fundo baixo.png"
+            alt="Detalhe inferior"
+        >
+
+    </div>
+
+    <script src="./cadastroUsuario.js"></script>
+
+</body>
+
+</html>

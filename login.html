@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./login.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+
+    <header class="detalheCima">
+        <img src="img/Fundo Cima.png" alt="Detalhe superior">
+    </header>
+
+    <main class="cadastro">
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                >
+            </div>
+
+           <div class="campo senha-campo">
+                <input 
+                    type="password" 
+                    id="senha" 
+                    placeholder="Senha"
+                >  
+            </div>
+
+        </div>
+
+        <div class="recuperar">
+    <a href="emailRecuperar.html">Esqueceu a senha?</a>
+</div>
+
+       <button 
+            id="botao" 
+            onclick="window.location.href='frutas.html'">Entrar</button
+        >
+
+        <div class="separacao">
+
+                <img
+                    class="ou"
+                    src="img/ou.png"
+                    alt="Ou"
+                >
+        </div>
+
+        <div class="marcas">
+
+                <img
+                    class="google"
+                    src="img/google.png"
+                    alt="Google"
+                >
+
+                <img
+                    class="mac"
+                    src="img/apple.png"
+                    alt="Mac"
+                >
+
+                <img
+                    class="face"
+                    src="img/facebook.png"
+                    alt="Facebook"
+                >
+
+            </div>
+
+        <div class="login">
+
+    <h3> 
+        Não possui uma conta? 
+    </h3>
+
+    <h2 onclick="window.location.href='cadastroUsuario.html'"> 
+        Cadastre-se 
+    </h2>
+
+</div>
+
+    </main>
+
+    <div class="detalheBaixo">
+
+        <img
+            src="img/Fundo baixo.png"
+            alt="Detalhe inferior"
+        >
+
+    </div>
+
+    <script src="./login.js"></script>
+
+</body>
+
+</html>
