@@ -123,29 +123,83 @@
 
     </section>
 
-    <!-- Responsáveis -->
-    <section class="card responsaveis">
+   
+<!-- Responsáveis -->
+<section class="card responsaveis">
+  <h2>
+    <i class="fa-solid fa-user-group"></i>
+    Responsáveis
+  </h2>
 
-      <h2>
-        <i class="fa-solid fa-user-group"></i>
-        Responsáveis
-      </h2>
+  <div id="listaResponsaveis"></div>
 
-      <div id="listaResponsaveis"></div>
+  <button
+    class="botao-adicionar"
+    id="adicionarResponsavel"
+    type="button"
+  >
+    <i class="fa-solid fa-user-plus"></i>
+    Adicionar responsável
+  </button>
+</section>
 
-      <button class="botao-adicionar" id="adicionarResponsavel">
-        <i class="fa-solid fa-user-plus"></i>
-        Adicionar responsável
+<!-- Modal de convite -->
+<div class="modal-overlay" id="modalConvite" hidden>
+  <div
+    class="modal-conteudo"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="tituloConvite"
+  >
+    <button
+      type="button"
+      class="modal-fechar"
+      id="fecharModal"
+      aria-label="Fechar"
+    >
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="modal-icone">
+      <i class="fa-solid fa-envelope"></i>
+    </div>
+
+    <h2 id="tituloConvite">Adicionar responsável</h2>
+
+    <p class="modal-descricao">
+      Informe o e-mail de quem deseja convidar para acompanhar
+      as informações do bebê.
+    </p>
+
+    <form id="formConvite">
+      <label for="emailResponsavel">E-mail do responsável</label>
+
+      <input
+        type="email"
+        id="emailResponsavel"
+        name="email"
+        placeholder="exemplo@email.com"
+        autocomplete="email"
+        required
+      >
+
+      <p id="mensagemConvite" role="status" aria-live="polite"></p>
+
+      <button type="submit" class="botao-enviar" id="botaoEnviar">
+        <i class="fa-solid fa-paper-plane"></i>
+        Enviar acesso
       </button>
 
-    </section>
-
-    <footer>
-      <i class="fa-solid fa-lock"></i>
-      Seus dados estão protegidos. Apenas você tem acesso a essas informações.
-    </footer>
-
-    </main>
+      <button
+        type="button"
+        class="botao-cancelar"
+        id="cancelarConvite"
+      >
+        Cancelar
+      </button>
+    </form>
+  </div>
+</div>
 
     <div class="detalheBaixo">
 
