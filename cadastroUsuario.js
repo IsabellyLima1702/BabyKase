@@ -19,5 +19,5 @@ function register() {
         }
     }
 
-    window.location.href = "cadastroResponsavel.html";
+    window.location.href = "cadastroCrianca.html";
 }

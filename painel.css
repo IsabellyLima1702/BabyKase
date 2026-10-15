@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --fundo: #fbefeb;
+  --branco: #fffdfc;
+  --terracota: #c97860;
+  --terracota-escuro: #85432d;
+  --rosa-claro: #fbe5df;
+  --texto: #75432f;
+  --texto-suave: #a58b80;
+}
+
+html,
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  padding: 18px;
+}
+
+body {
+    background-color: rgb(250, 229, 225); 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    /*
+        Espaço para o conteúdo não ficar
+        em cima dos detalhes de fundo.
+    */
+    padding: 40px 20px 180px;
+    /*
+        Evita barra horizontal caso as imagens
+        ultrapassem alguns pixels da viewport.
+    */
+    overflow-x: hidden;
+}
+
+/* ================================================= */
+/* FUNDO DE CIMA */
+/* ================================================= */
+
+.detalheCima {
+    position: fixed;
+    top: 0;
+    left:0;
+    width:20vw;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.detalheCima img {
+    display: block;
+    width: 250px;
+    height: 350px;
+    max-width: none;
+}
+
+
+/* ================================================= */
+/* ÁREA PRINCIPAL */
+/* ================================================= */
+
+.cadastro {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.voltar .seta {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+/* ================================================= */
+/* LOGO */
+/* ================================================= */
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.titulo {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  margin: 0 0 14px 3px;
+  color: var(--terracota-escuro);
+}
+
+.titulo i,
+.perfil-info h2 i {
+  color: #e77d7e;
+  font-size: 0.8em;
+}
+
+/* Estilo compartilhado dos cards */
+
+.card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(153, 99, 76, 0.035);
+}
+
+/* Perfil principal */
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  margin-bottom: 12px;
+  min-height: 145px;
+}
+
+.foto-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.foto-container img {
+  display: block;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #f4c7b8;
+  padding: 3px;
+  background: white;
+}
+
+.botao-foto {
+  position: absolute;
+  bottom: 3px;
+  right: 2px;
+  width: 35px;
+  height: 35px;
+  background: var(--terracota);
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.perfil-info {
+  min-width: 0;
+}
+
+.perfil-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+
+.idade {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--rosa-claro);
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Grades dos cards */
+
+.grade {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.grade-tres {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grade-dois {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 13px;
+  min-width: 0;
+  min-height: 100px;
+}
+
+.icone {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: var(--rosa-claro);
+  color: var(--terracota);
+  display: grid;
+  place-items: center;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.legenda {
+  color: var(--texto-suave);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.info-card strong {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Responsáveis */
+
+.responsaveis {
+  padding: 16px;
+}
+
+.responsaveis h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.responsaveis h2 i {
+  color: var(--terracota);
+}
+
+.responsavel-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: #fff6f2;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.botao-remover {
+  border: none;
+  background: transparent;
+  color: #b75d50;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.botao-adicionar {
+  width: 100%;
+  min-height: 43px;
+  background: var(--terracota);
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font: inherit;
+  font-size: 13px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.botao-adicionar:hover {
+  background: #b96750;
+}
+
+.botao-adicionar:active {
+  transform: scale(0.99);
+}
+
+/* Rodapé */
+
+footer {
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 10px;
+  padding: 14px 4px 0;
+}
+
+footer i {
+  color: var(--terracota);
+  margin-right: 4px;
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  .titulo {
+    font-size: 22px;
+  }
+
+  .perfil {
+    gap: 14px;
+    padding: 12px;
+    min-height: 115px;
+  }
+
+  .foto-container img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .botao-foto {
+    width: 30px;
+    height: 30px;
+  }
+
+  .perfil-info h2 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .idade {
+    font-size: 10px;
+    padding: 6px 9px;
+  }
+
+  .grade {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .grade-tres {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .info-card {
+    padding: 10px;
+    min-height: 95px;
+  }
+
+  .icone {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .legenda {
+    font-size: 11px;
+  }
+
+  .info-card strong {
+    font-size: 12px;
+  }
+
+  .responsaveis {
+    padding: 13px;
+  }
+
+  .responsaveis h2 {
+    font-size: 17px;
+  }
+
+  footer {
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 360px) {
+  .grade-tres {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil-info h2 {
+    font-size: 15px;
+  }
+}
+
+/* ================================================= */
+/* FUNDO DE BAIXO */
+/* ================================================= */
+
+.detalheBaixo {
+    position: fixed;
+    bottom: 0;
+    left: 80vw;
+    width: 20vw;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.detalheBaixo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+}
+
+/* ================================================= */
+/* TABLETS E CELULARES */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 20px 130px;
+    }
+
+
+    /* ============================== */
+    /* LOGO */
+    /* ============================== */
+
+    .logo {
+        width: 250px;
+        height: auto;
+    }
+
+    .logo-container {
+        margin-bottom: 30px;
+    }
+
+
+    /* ============================== */
+    /* INPUTS */
+    /* ============================== */
+
+    .inputs {
+        gap: 18px;
+    }
+
+
+    /* ============================== */
+    /* CAMPOS */
+    /* ============================== */
+
+    .campo input {
+        width: 100%;
+
+        height: 58px;
+
+        font-size: 16px;
+
+        border-radius: 12px;
+    }
+    
+    /* ============================== */
+    /* LOGIN */
+    /* ============================== */
+
+    .login {
+        margin-top: 25px;
+    }
+
+    .login h3,
+    .login h2 {
+        font-size: 16px;
+    }
+}
+
+/* ================================================= */
+/* CELULARES PEQUENOS */
+/* ================================================= */
+
+@media (max-width: 350px) {
+
+    body {
+        padding: 20px 15px 110px;
+    }
+
+    /* ============================== */
+    /* LOGO */
+    /* ============================== */
+
+    .logo {
+        width: 220px;
+        height: auto;
+    }
+
+    /* ============================== */
+    /* CAMPOS */
+    /* ============================== */
+
+    .campo input {
+        height: 52px;
+
+        font-size: 15px;
+    }
+
+    /* ============================== */
+    /* MARCAS */
+    /* ============================== */
+
+    .marcas {
+        gap: 10px;
+    }
+
+    .marcas img {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* ============================== */
+    /* LOGIN */
+    /* ============================== */
+
+    .login {
+        flex-direction: column;
+
+        gap: 3px;
+    }
+}
+
+/* ================================================= */
+/* TELAS MUITO ALTAS / GRANDES */
+/* ================================================= */
+
+@media (min-width: 1200px) {
+
+    .cadastro {
+        max-width: 600px;
+    }
+
+    .logo {
+        width: 350px;
+        height: auto;
+    }
+}

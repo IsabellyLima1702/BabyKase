@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./painel.css">
+
+    <title>Painel do Bebê</title>
+</head>
+
+<body>
+
+    <header class="detalheCima">
+        <img src="img/Fundo Cima.png" alt="Detalhe superior">
+    </header>
+
+    <main class="cadastro">
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+
+            <!-- Ícones -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+
+  <main class="container">
+
+    <h1 class="titulo">
+      Painel do bebê <i class="fa-solid fa-heart"></i>
+    </h1>
+
+    <!-- Card principal -->
+    <section class="card perfil">
+      <div class="foto-container">
+        <img
+          id="fotoBebe"
+          src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=300"
+          alt="Foto do bebê">
+
+        <label for="uploadFoto" class="botao-foto">
+          <i class="fa-solid fa-camera"></i>
+        </label>
+
+        <input type="file" id="uploadFoto" accept="image/*" hidden>
+      </div>
+
+      <div class="perfil-info">
+        <h2>
+          Helena Martins Oliveira
+          <i class="fa-solid fa-heart"></i>
+        </h2>
+
+        <span class="idade">
+          <i class="fa-regular fa-calendar-days"></i>
+          <span id="idadePrincipal">Calculando idade...</span>
+        </span>
+      </div>
+    </section>
+
+    <!-- Informações pessoais -->
+    <section class="grade grade-tres">
+
+      <article class="card info-card">
+        <span class="icone">
+          <i class="fa-solid fa-user"></i>
+        </span>
+        <span class="legenda">Nome completo</span>
+        <strong>Helena Martins Oliveira</strong>
+      </article>
+
+      <article class="card info-card">
+        <span class="icone">
+          <i class="fa-regular fa-calendar-days"></i>
+        </span>
+        <span class="legenda">Data de nascimento</span>
+        <strong>27 de janeiro de 2026</strong>
+      </article>
+
+      <article class="card info-card">
+        <span class="icone">
+          <i class="fa-solid fa-baby"></i>
+        </span>
+        <span class="legenda">Idade</span>
+        <strong id="idadeCard">Calculando...</strong>
+      </article>
+
+    </section>
+
+    <!-- Medidas do bebê -->
+    <section class="grade grade-dois">
+
+      <article class="card info-card">
+        <span class="icone">
+          <i class="fa-solid fa-weight-scale"></i>
+        </span>
+        <span class="legenda">Peso atual</span>
+        <strong>8,2 kg</strong>
+      </article>
+
+      <article class="card info-card">
+        <span class="icone">
+          <i class="fa-solid fa-ruler-vertical"></i>
+        </span>
+        <span class="legenda">Altura atual</span>
+        <strong>68 cm</strong>
+      </article>
+
+    </section>
+
+    <!-- Responsáveis -->
+    <section class="card responsaveis">
+
+      <h2>
+        <i class="fa-solid fa-user-group"></i>
+        Responsáveis
+      </h2>
+
+      <div id="listaResponsaveis"></div>
+
+      <button class="botao-adicionar" id="adicionarResponsavel">
+        <i class="fa-solid fa-user-plus"></i>
+        Adicionar responsável
+      </button>
+
+    </section>
+
+    <footer>
+      <i class="fa-solid fa-lock"></i>
+      Seus dados estão protegidos. Apenas você tem acesso a essas informações.
+    </footer>
+
+    </main>
+
+    <div class="detalheBaixo">
+
+        <img
+            src="img/Fundo baixo.png"
+            alt="Detalhe inferior"
+        >
+
+        <script src="painel.js"></script>
+
+    </div>
+
+</body>
+
+</html>

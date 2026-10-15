@@ -133,7 +133,15 @@ body {
 }
 
 #nome {
-    background-image: url("img/icone_perfil.png");
+    background-image: url("img/perfil.png");
+}
+
+#telefone {
+    background-image: url("img/telefone.png");
+}
+
+#data {
+    background-image: url("img/calendario.png");
 }
 
 #email {
@@ -156,6 +164,70 @@ body {
     width: 80%;
     max-width: 450px;
     padding-right: 55px;
+}
+
+/* ================================================= */
+/* TIPO DE RESPONSÁVEL */
+/* ================================================= */
+
+
+.tipo-responsavel {
+  display: flex;
+  gap: 10px;
+  width: 300px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.opcao-responsavel {
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.opcao-responsavel input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.opcao-responsavel span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 6px 4px;
+  box-sizing: border-box;
+
+  border: 1px solid #ff827b;
+  border-radius: 22px;
+  background: #fff;
+  color: #80615d;
+
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+
+  transition: 0.2s ease;
+}
+
+/* Opção selecionada */
+.opcao-responsavel input:checked + span {
+  background: #e36d5b;
+  border-color: #e36d5b;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Acessibilidade pelo teclado */
+.opcao-responsavel input:focus-visible + span {
+  outline: 2px solid #a94435;
+  outline-offset: 3px;
+}
+
+/* Efeito ao passar o mouse */
+.opcao-responsavel:hover span {
+  border-color: #e36d5b;
 }
 
 /* ================================================= */
@@ -182,6 +254,41 @@ body {
     cursor: pointer;
 }
 
+/* ================================================= */
+/* PRIVACIDADE */
+/* ================================================= */
+
+
+.privacidade {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.privacidade input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #6c63ff;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.privacidade label {
+    cursor: pointer;
+}
+
+.privacidade a {
+    color: #6c63ff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.privacidade a:hover {
+    color: #5148d8;
+}
 
 /* ================================================= */
 /* BOTÃO */

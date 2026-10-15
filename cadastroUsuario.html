@@ -38,6 +38,22 @@
 
             <div class="campo">
                 <input
+                    type="date"
+                    id="data"
+                    placeholder="Data de nascimento:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="Telefone:"
+                >
+            </div>
+
+            <div class="campo">
+                <input
                     type="email"
                     id="email"
                     placeholder="Email:"
@@ -59,6 +75,47 @@
                     placeholder="Confirmar senha:"
                 >
             </div>
+         
+            <div class="tipo-responsavel">
+                <label class="opcao-responsavel">
+                    <input
+                        type="radio"
+                        name="tipoResponsavel"
+                        value="mae"
+                        required
+                    />
+                <span>Mãe</span>
+            </label>
+
+            <label class="opcao-responsavel">
+                <input
+                    type="radio"
+                    name="tipoResponsavel"
+                    value="pai"
+                />
+                <span>Pai</span>
+            </label>
+
+            <label class="opcao-responsavel">
+                <input
+                    type="radio"
+                    name="tipoResponsavel"
+                    value="responsavel_legal"
+                />
+                <span>Responsável legal</span>
+            </label>
+        </div>
+
+        <div class="privacidade">
+    <input type="checkbox" id="privacidade" name="privacidade" required>
+
+    <label for="privacidade">
+        Aceito a
+        <a href="politicaPrivacidade.html" target="_blank">
+            Política de Privacidade
+        </a>
+    </label>
+</div>
 
             <div class="marcas">
 
@@ -70,7 +127,7 @@
 
                 <img
                     class="mac"
-                    src="img/mac.png"
+                    src="img/apple.png"
                     alt="Mac"
                 >
 
