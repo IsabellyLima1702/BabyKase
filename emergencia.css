@@ -1,0 +1,122 @@
+
+#botao-emergencia {
+  position: fixed;
+  right: 18px;
+  bottom: 120px;
+  z-index: 10001;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 13px 18px;
+  border: none;
+  border-radius: 30px;
+
+  background: #b42318;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+}
+
+#botao-emergencia span:first-child {
+  font-size: 21px;
+}
+
+#botao-emergencia:hover {
+  background: #8f1d14;
+}
+
+#botao-emergencia:focus-visible,
+.fechar-emergencia:focus-visible,
+.opcao-emergencia:focus-visible {
+  outline: 3px solid #222;
+  outline-offset: 3px;
+}
+
+.painel-emergencia {
+  position: fixed;
+  right: 18px;
+  bottom: 185px;
+  z-index: 10002;
+
+  width: min(360px, calc(100vw - 32px));
+  max-height: 65vh;
+  overflow-y: auto;
+
+  padding: 24px 18px 18px;
+  border-radius: 18px;
+  background: #fffaf7;
+  color: #3b2118;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.painel-emergencia[hidden] {
+  display: none;
+}
+
+.painel-emergencia h2 {
+  margin: 8px 25px 12px 0;
+  font-size: 20px;
+}
+
+.painel-emergencia p {
+  line-height: 1.5;
+}
+
+.fechar-emergencia {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: #54271b;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.opcao-emergencia {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 13px;
+  border: 1px solid #efc8bb;
+  border-radius: 12px;
+  color: #842018;
+  text-decoration: none;
+}
+
+.opcao-emergencia:hover {
+  background: #ffebe4;
+}
+
+.opcao-emergencia span {
+  color: #4b3832;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.aviso-emergencia {
+  font-size: 12px;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+  #botao-emergencia {
+    right: 12px;
+    bottom: 100px;
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+
+  .painel-emergencia {
+    right: 12px;
+    bottom: 158px;
+    width: calc(100vw - 24px);
+    max-height: 60vh;
+  }
+}
