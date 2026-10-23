@@ -1,0 +1,157 @@
+
+[
+  {
+    "id": 1,
+    "nome": "CAPS Adulto III Paraisópolis",
+    "endereco": "Rua Dr. Flávio Américo Maurano, 331",
+    "bairro": "Fazenda Morumbi",
+    "cidade": "São Paulo",
+    "zona": "Sul",
+    "telefone": "11930606710"
+  },
+  {
+    "id": 2,
+    "nome": "CAPS Adulto III Jardim Lídia",
+    "endereco": "Rua Gutemberg José Ferreira, 50",
+    "bairro": "Jardim Sandra",
+    "cidade": "São Paulo",
+    "zona": "Sul",
+    "telefone": "11951286750"
+  },
+  {
+    "id": 3,
+    "nome": "CAPS IJ II Santo Amaro",
+    "endereco": "Rua Iguatinga, 134",
+    "bairro": "Santo Amaro",
+    "cidade": "São Paulo",
+    "zona": "Sul",
+    "telefone": "11952376855"
+  },
+  {
+    "id": 4,
+    "nome": "CAPS AD II Cachoeirinha",
+    "endereco": "Rua Desembargador Rodrigues Sette, 111",
+    "bairro": "Jardim Peri",
+    "cidade": "São Paulo",
+    "zona": "Norte",
+    "telefone": "11922324430"
+  },
+  {
+    "id": 5,
+    "nome": "CAPS AD II Casa Verde",
+    "endereco": "Rua Ferreira de Almeida, 22",
+    "bairro": "Casa Verde",
+    "cidade": "São Paulo",
+    "zona": "Norte",
+    "telefone": "11952374195"
+  },
+  {
+    "id": 6,
+    "nome": "Centro de Atenção Psicossocial Infantil II Casa Verde Cachoeirinha Limão",
+    "endereco": "Rua Sete de Dezembro, 72",
+    "bairro": "Vila Bela Vista",
+    "cidade": "São Paulo",
+    "zona": "Norte",
+    "telefone": "11952374250"
+  },
+  {
+    "id": 7,
+    "nome": "CAPS AD Cidade Tiradentes",
+    "endereco": "Rua Juá Mirim, 366",
+    "bairro": "Chácara Santa Etelvina",
+    "cidade": "São Paulo",
+    "zona": "Leste",
+    "telefone": "11925586491"
+  },
+  {
+    "id": 8,
+    "nome": "CAPS IJ Itaquera",
+    "endereco": "Rua Bernardino Prudenti, 86",
+    "bairro": "Conjunto Residencial José Bonifácio",
+    "cidade": "São Paulo",
+    "zona": "Leste",
+    "telefone": null
+  },
+  {
+    "id": 9,
+    "nome": "Núcleo de Estudo e Atendimento Psicológico (NEAP) Anália Franco",
+    "endereco": "Rua Professor João de Oliveira Torres, 306",
+    "bairro": "Jardim Anália Franco",
+    "cidade": "São Paulo",
+    "zona": "Leste",
+    "telefone": "11922680867"
+  },
+  {
+    "id": 10,
+    "nome": "Instituto de Psicologia da USP",
+    "endereco": "Avenida Professor Mello Moraes, 1721",
+    "bairro": "Butantã, Cidade Universitária",
+    "cidade": "São Paulo",
+    "zona": "Oeste",
+    "telefone": "11930915015"
+  },
+  {
+    "id": 11,
+    "nome": "CAPS AD III Lapa",
+    "endereco": "Rua Brigadeiro Gavião Peixoto, 721",
+    "bairro": "Lapa",
+    "cidade": "São Paulo",
+    "zona": "Oeste",
+    "telefone": "11952373605"
+  },
+  {
+    "id": 12,
+    "nome": "Centro de Psicologia Aplicada UNIP",
+    "endereco": "Rua Antônio Macedo, 505",
+    "bairro": "Parque São Jorge",
+    "cidade": "São Paulo",
+    "zona": "Oeste",
+    "telefone": "11920904518"
+  },
+  {
+    "id": 13,
+    "nome": "Serviço-Escola de Psicologia da UMC",
+    "endereco": "Avenida Dr. Cândido Xavier de Almeida e Souza, 200",
+    "bairro": "Centro Cívico",
+    "cidade": "Mogi das Cruzes",
+    "zona": "Centro",
+    "telefone": "11947987133"
+  },
+  {
+    "id": 14,
+    "nome": "Serviço-Escola de Psicologia - Braz Cubas",
+    "endereco": "Avenida Francisco Rodrigues Filho, 1233",
+    "bairro": "Mogilar",
+    "cidade": "Mogi das Cruzes",
+    "zona": "Centro",
+    "telefone": "11930915015"
+  },
+  {
+    "id": 15,
+    "nome": "LS Psicologia & Neuropsicologia Unidade República",
+    "endereco": "Rua Dr. Bráulio Gomes, 25",
+    "bairro": "República",
+    "cidade": "São Paulo",
+    "zona": "Centro",
+    "telefone": "11987857286"
+  },
+  {
+    "id": 16,
+    "nome": "Clínica de Psicologia Aroeira Barci",
+    "endereco": "Rua Antônio Carlos, 582, sala 92",
+    "bairro": "Consolação",
+    "cidade": "São Paulo",
+    "zona": "Centro",
+    "telefone": "11991492492",
+    "observacao": "Atendimento a crianças, adolescentes e adultos; avaliação neuropsicológica."
+  },
+  {
+    "id": 17,
+    "nome": "Canto Baobá Psicologia",
+    "endereco": "Rua Sílvia, 173",
+    "bairro": "Bela Vista",
+    "cidade": "São Paulo",
+    "zona": "Centro",
+    "telefone": "11996109991"
+  }
+]

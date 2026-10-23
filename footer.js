@@ -34,6 +34,11 @@ footer.innerHTML = `
             <span>Perfil</span>
         </a>
 
+        <a href="hospitais.html" class="item-menu">
+            <i data-lucide="user-round"></i>
+            <span>Mapa</span>
+        </a>
+
     </nav>
 `;
 

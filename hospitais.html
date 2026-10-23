@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087f5b">
+
+  <title>Atendimento Psicológico | Localizador</title>
+
+  <link rel="stylesheet" href="hospitais.css">
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+</head>
+<body>
+  <header class="topbar">
+    <div class="identidade">
+      <div class="logo" aria-hidden="true">+</div>
+      <div>
+        <h1>Atendimento Psicológico</h1>
+        <p>Encontre serviços de atendimento perto de você</p>
+      </div>
+    </div>
+
+    <button id="btn-localizacao" class="btn-localizacao" type="button">
+      <span aria-hidden="true">📍</span>
+      Usar minha localização
+    </button>
+  </header>
+
+  <section class="agendamento">
+    <div>
+      <span class="selo">AGENDAMENTO ONLINE</span>
+      <h2>Precisa agendar uma consulta?</h2>
+      <p>Consulte o portal de agendamento de consultas da Uninove.</p>
+    </div>
+
+    <a
+      class="btn-agendamento"
+      href="https://digital.uninove.br/ambulatorio/?_gl=1*1ueby9r*_gcl_au*NTczMDYyOTQ2LjE3ODc4MzI5MDk"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Acessar agendamento ↗
+    </a>
+  </section>
+
+  <main class="container">
+    <aside class="painel">
+      <div class="titulo-painel">
+        <div>
+          <h2>Locais de atendimento</h2>
+          <p>Encontre uma unidade por região ou endereço.</p>
+        </div>
+      </div>
+
+      <label for="busca">Buscar local</label>
+      <div class="campo-busca">
+        <span aria-hidden="true">⌕</span>
+        <input
+          id="busca"
+          type="search"
+          placeholder="Nome, bairro ou endereço..."
+          autocomplete="off"
+        >
+      </div>
+
+      <label for="filtro-zona">Região</label>
+      <select id="filtro-zona">
+        <option value="Todas">Todas as regiões</option>
+        <option value="Sul">Zona Sul</option>
+        <option value="Norte">Zona Norte</option>
+        <option value="Leste">Zona Leste</option>
+        <option value="Oeste">Zona Oeste</option>
+        <option value="Centro">Centro e região metropolitana</option>
+      </select>
+
+      <div class="resumo-lista">
+        <span id="contador">Carregando unidades...</span>
+        <span id="ordenacao">Ordem alfabética</span>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite">
+        Carregando os locais de atendimento...
+      </p>
+
+      <div id="lista-hospitais" class="lista-hospitais"></div>
+
+      <p class="nota">
+        As distâncias são estimadas em linha reta. Confirme o endereço e
+        a disponibilidade de atendimento diretamente com a unidade.
+      </p>
+    </aside>
+
+    <section class="mapa-container" aria-label="Mapa dos locais de atendimento">
+      <div class="mapa-cabecalho">
+        <span class="mapa-ponto"></span>
+        <span>Mapa de atendimento</span>
+      </div>
+      <div id="mapa"></div>
+      <div class="legenda">
+        <span class="legenda-marcador"></span>
+        Unidades de atendimento
+        <span class="legenda-usuario"></span>
+        Sua localização
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Diretório informativo de serviços de atendimento psicológico.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="hospitais.js"></script>
+</body>
+</html>

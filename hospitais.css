@@ -1,0 +1,606 @@
+
+:root {
+  --primary: #d47d63;
+  --primary-dark: #d47d63;
+  --primary-light: #fff6f0;
+  --background: #ffe9d2;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #64748b;
+  --border: #b42318;
+  --danger: #b42318;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #d47d63;
+  outline-offset: 3px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 32px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.identidade {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: var(--primary);
+  color: white;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.identidade h1 {
+  margin: 0;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+}
+
+.identidade p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.btn-localizacao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-weight: 650;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.btn-localizacao:hover,
+.btn-agendamento:hover {
+  background: var(--primary-dark);
+}
+
+.btn-localizacao:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.agendamento {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 24px 0;
+  padding: 20px 24px;
+  border: 1px solid #b42318;
+  border-radius: var(--radius);
+  background: var(--primary-light);
+}
+
+.selo {
+  color: var(--primary-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.agendamento h2 {
+  margin: 7px 0 5px;
+  color: #d47d63;
+  font-size: 17px;
+}
+
+.agendamento p {
+  margin: 0;
+  color: #d47d63;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.btn-agendamento {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 11px 16px;
+  border-radius: 9px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 650;
+  transition: background 0.2s;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(330px, 410px) minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+.painel {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 2px 8px rgb(15 23 42 / 3%);
+}
+
+.titulo-painel h2 {
+  margin: 0;
+  font-size: 19px;
+  letter-spacing: -0.4px;
+}
+
+.titulo-painel p {
+  margin: 7px 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.painel label {
+  display: block;
+  margin: 16px 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.campo-busca {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-left: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: white;
+}
+
+.campo-busca > span {
+  color: var(--muted);
+  font-size: 25px;
+  line-height: 1;
+}
+
+.campo-busca input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 12px 12px 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+}
+
+.campo-busca:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgb(8 127 91 / 10%);
+}
+
+#filtro-zona {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: white;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.resumo-lista {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 22px;
+  font-size: 11px;
+}
+
+#contador {
+  font-weight: 750;
+}
+
+#ordenacao {
+  color: var(--muted);
+  text-align: right;
+}
+
+.status {
+  margin: 10px 0 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.lista-hospitais {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hospital-card {
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.hospital-card:hover,
+.hospital-card.selecionado {
+  border-color: var(--primary);
+  background: #f3fbf6;
+}
+
+.card-cabecalho {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.icone-hospital {
+  display: grid;
+  flex: 0 0 36px;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--primary-light);
+  font-size: 18px;
+}
+
+.card-titulo {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-titulo h3 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.badge-zona {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #f1f5f9;
+  color: #d47d63;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.card-endereco {
+  margin: 12px 0 5px;
+  color: #d47d63;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.card-bairro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.card-telefone {
+  display: inline-block;
+  margin-top: 11px;
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card-telefone:hover {
+  text-decoration: underline;
+}
+
+.telefone-indisponivel {
+  margin: 11px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.distancia {
+  display: block;
+  margin-top: 11px;
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.card-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.card-acoes button,
+.card-acoes a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-ver {
+  background: white;
+  color: var(--text);
+}
+
+.btn-ver:hover {
+  border-color: var(--primary);
+}
+
+.btn-rota {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary) !important;
+}
+
+.btn-rota:hover {
+  background: var(--primary-dark);
+}
+
+.mensagem-vazia {
+  padding: 25px 12px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.nota {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.mapa-container {
+  position: sticky;
+  top: 16px;
+  min-width: 0;
+  height: calc(100vh - 32px);
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #e8eef0;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 3%);
+}
+
+.mapa-cabecalho {
+  position: absolute;
+  z-index: 500;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  border: 1px solid rgb(226 232 240 / 90%);
+  border-radius: 9px;
+  background: white;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 10%);
+  font-size: 12px;
+  font-weight: 750;
+  pointer-events: none;
+}
+
+.mapa-ponto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+#mapa {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  z-index: 1;
+}
+
+.legenda {
+  position: absolute;
+  z-index: 500;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid rgb(226 232 240 / 90%);
+  border-radius: 9px;
+  background: white;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 10%);
+  font-size: 10px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.legenda-marcador,
+.legenda-usuario {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #d47d63;
+  box-shadow: 0 0 0 1px #d47d63;
+}
+
+.legenda-usuario {
+  margin-left: 5px;
+  background: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+.rodape {
+  padding: 20px 24px;
+  border-top: 1px solid var(--border);
+  background: white;
+  text-align: center;
+}
+
+.rodape p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    grid-template-columns: 430px minmax(0, 1fr);
+  }
+
+  .lista-hospitais {
+    max-height: calc(100vh - 310px);
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    padding: 18px 20px;
+  }
+
+  .container {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .mapa-container {
+    position: relative;
+    top: auto;
+    order: -1;
+    height: 48vh;
+    min-height: 350px;
+  }
+
+  .lista-hospitais {
+    max-height: none;
+  }
+
+  .agendamento {
+    margin: 14px 14px 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .identidade h1 {
+    font-size: 18px;
+  }
+
+  .btn-localizacao {
+    width: 100%;
+  }
+
+  .agendamento {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 17px;
+  }
+
+  .btn-agendamento {
+    width: 100%;
+  }
+
+  .mapa-container {
+    height: 42vh;
+    min-height: 300px;
+  }
+
+  .painel {
+    padding: 15px;
+  }
+}
