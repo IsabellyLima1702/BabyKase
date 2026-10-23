@@ -29,14 +29,14 @@ footer.innerHTML = `
             <span>Conteúdos</span>
         </a>
 
+         <a href="hospitais.html" class="item-menu">
+            <i data-lucide="map-pinned"></i>
+            <span>Hospitais</span>
+        </a>
+
         <a href="painel.html" class="item-menu">
             <i data-lucide="user-round"></i>
             <span>Perfil</span>
-        </a>
-
-        <a href="hospitais.html" class="item-menu">
-            <i data-lucide="user-round"></i>
-            <span>Mapa</span>
         </a>
 
     </nav>
