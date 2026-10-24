@@ -17,6 +17,11 @@ footer.innerHTML = `
             <span>Vacinas</span>
         </a>
 
+        <a href="calendario.html" class="item-menu">
+            <i data-lucide="calendar-days"></i>
+            <span>Calendário</span>
+        </a>
+
         <a href="frutas.html" class="item-menu item-central">
             <div class="icone-central">
                 <i data-lucide="baby"></i>

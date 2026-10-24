@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Calendário</title>
+  <link rel="stylesheet" href="calendario.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="emergencia.css">
+  <script src="calendario.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ORGANIZAÇÃO PESSOAL</p>
+        <h1>Meu calendário</h1>
+        <p class="subtitle">
+          Seus dias, seus planos, tudo em um só lugar.
+        </p>
+      </div>
+
+      <button id="new-event-top" class="button primary">
+        + Novo evento
+      </button>
+    </header>
+
+    <section class="calendar-card">
+      <div class="calendar-toolbar">
+        <div class="month-controls">
+          <button id="prev-month" class="icon-button"
+            aria-label="Mês anterior">‹</button>
+
+          <h2 id="month-title"></h2>
+
+          <button id="next-month" class="icon-button"
+            aria-label="Próximo mês">›</button>
+
+          <button id="today-button" class="button quiet">
+            Hoje
+          </button>
+        </div>
+
+        <div class="legend">
+          <span class="legend-dot"></span>
+          Hoje
+          <span class="legend-event"></span>
+          Com evento
+        </div>
+      </div>
+
+      <div class="calendar-grid weekdays">
+        <span>Dom</span>
+        <span>Seg</span>
+        <span>Ter</span>
+        <span>Qua</span>
+        <span>Qui</span>
+        <span>Sex</span>
+        <span>Sáb</span>
+      </div>
+
+      <div id="calendar-days" class="calendar-grid days"></div>
+    </section>
+
+    <section class="events-card">
+      <div class="events-heading">
+        <div>
+          <p class="eyebrow">AGENDA DO DIA</p>
+          <h2 id="selected-date-title"></h2>
+        </div>
+
+        <button id="new-event-day" class="button secondary">
+          + Adicionar
+        </button>
+      </div>
+
+      <div id="event-list" class="event-list"></div>
+    </section>
+
+    <footer class="footer-note">
+      <span class="storage-indicator"></span>
+
+      Eventos salvos neste navegador.
+
+      <button id="export-button" class="text-button">
+        Exportar backup
+      </button>
+
+      <label class="text-button" for="import-file">
+        Importar backup
+      </label>
+
+      <input id="import-file" type="file"
+        accept=".json,application/json" hidden>
+    </footer>
+  </main>
+
+  <dialog id="event-dialog" class="event-dialog">
+    <form id="event-form">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow" id="dialog-eyebrow">
+            NOVO COMPROMISSO
+          </p>
+          <h2 id="dialog-title">Adicionar evento</h2>
+        </div>
+
+        <button id="close-dialog" class="icon-button"
+          type="button" aria-label="Fechar">×</button>
+      </div>
+
+      <input id="event-id" type="hidden">
+
+      <label for="event-title">Título *</label>
+      <input id="event-title" type="text"
+        maxlength="100" placeholder="Ex.: Consulta médica" required>
+
+      <div class="form-row">
+        <div>
+          <label for="event-date">Data *</label>
+          <input id="event-date" type="date" required>
+        </div>
+
+        <div>
+          <label for="event-time">Horário</label>
+          <input id="event-time" type="time">
+        </div>
+      </div>
+
+      <label for="event-category">Categoria</label>
+      <select id="event-category">
+        <option value="Pessoal">Pessoal</option>
+        <option value="Trabalho">Trabalho</option>
+        <option value="Saúde">Saúde</option>
+        <option value="Estudos">Estudos</option>
+        <option value="Outro">Outro</option>
+      </select>
+
+      <label for="event-notes">Observações</label>
+      <textarea id="event-notes" rows="3"
+        maxlength="1000"
+        placeholder="Detalhes opcionais..."></textarea>
+
+      <p id="form-error" class="form-error"></p>
+
+      <div class="dialog-actions">
+        <button id="cancel-dialog" class="button quiet"
+          type="button">Cancelar</button>
+
+        <button class="button primary" type="submit">
+          Salvar evento
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+</body>
+</html>
