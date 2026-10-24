@@ -22,7 +22,6 @@
     dialogEyebrow: $("#dialog-eyebrow"),
     formError: $("#form-error"),
     toast: $("#toast"),
-    importFile: $("#import-file")
   };
 
   const today = new Date();
@@ -592,67 +591,7 @@
     URL.revokeObjectURL(url);
 
     showToast("Backup exportado.");
-  });
-
-  // Importa eventos de um backup JSON.
-  el.importFile.addEventListener("change", async () => {
-    const file = el.importFile.files?.[0];
-
-    if (!file) return;
-
-    try {
-      const content = JSON.parse(await file.text());
-
-      const imported = Array.isArray(content)
-        ? content
-        : content.events;
-
-      if (
-        !Array.isArray(imported) ||
-        !imported.every(isValidEvent)
-      ) {
-        throw new Error("Formato inválido.");
-      }
-
-      const normalized = imported.map(normalizeEvent);
-
-      const confirmed = confirm(
-        `Importar ${normalized.length} evento(s)? ` +
-        "Eventos com o mesmo ID serão substituídos."
-      );
-
-      if (!confirmed) return;
-
-      const byId = new Map(
-        events.map(event => [event.id, event])
-      );
-
-      normalized.forEach(event => {
-        byId.set(event.id, event);
-      });
-
-      const previous = events;
-
-      events = [...byId.values()];
-
-      if (!saveEvents()) {
-        events = previous;
-        renderAll();
-        return;
-      }
-
-      renderAll();
-
-      showToast("Backup importado!");
-
-    } catch (error) {
-      console.error(error);
-
-      showToast("Não foi possível importar o arquivo.");
-    } finally {
-      el.importFile.value = "";
-    }
-  });
+  }); 
 
   // Inicializa a aplicação.
   renderAll();

@@ -4,10 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Calendário</title>
+
   <link rel="stylesheet" href="calendario.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="emergencia.css">
+
+  <!-- Biblioteca dos ícones do menu -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Scripts da página -->
   <script src="calendario.js" defer></script>
+  <script src="footer.js" defer></script>
+  <script src="emergencia.js" defer></script>
 </head>
 <body>
   <main class="app">
@@ -86,12 +94,6 @@
         Exportar backup
       </button>
 
-      <label class="text-button" for="import-file">
-        Importar backup
-      </label>
-
-      <input id="import-file" type="file"
-        accept=".json,application/json" hidden>
     </footer>
   </main>
 
