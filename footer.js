@@ -35,7 +35,7 @@ footer.innerHTML = `
       <span>Hospitais</span>
     </a>
 
-    <a href="painel.html" class="item-menu">
+    <a href="perfil.html" class="item-menu">
       <i data-lucide="user-round"></i>
       <span>Perfil</span>
     </a>

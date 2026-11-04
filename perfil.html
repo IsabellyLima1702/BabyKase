@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fbefeb">
+  <title>Perfil do responsável</title>
+
+  <link rel="stylesheet" href="./perfil.css">
+  <link rel="stylesheet" href="./footer.css">
+  <link rel="stylesheet" href="./emergencia.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="detalheCima" aria-hidden="true">
+    <img src="img/Fundo Cima.png" alt="">
+  </header>
+
+  <main class="container">
+
+    <div class="logo-container">
+      <img class="logo" src="img/logo.png" alt="BabyKare">
+    </div>
+
+    <div class="cabecalho-pagina">
+      <div>
+        <p class="sobretitulo">MINHA CONTA</p>
+
+        <h1 class="titulo">
+          Perfil do responsável
+          <i class="fa-solid fa-heart"></i>
+        </h1>
+
+        <p class="subtitulo">
+          Gerencie seus dados e os perfis das crianças vinculadas à sua conta.
+        </p>
+      </div>
+    </div>
+
+    <!-- PERFIL DO RESPONSÁVEL -->
+
+    <section class="card perfil">
+
+      <div class="foto-container">
+
+        <img
+          id="fotoResponsavel"
+          src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300"
+          alt="Foto do responsável"
+        >
+
+        <label for="uploadFotoResponsavel" class="botao-foto">
+          <i class="fa-solid fa-camera"></i>
+        </label>
+
+        <input
+          type="file"
+          id="uploadFotoResponsavel"
+          accept="image/*"
+          hidden
+        >
+
+      </div>
+
+      <div class="perfil-info">
+
+        <span class="etiqueta">RESPONSÁVEL DA CONTA</span>
+
+        <h2 id="nomePerfil">
+          Mariana Martins Oliveira
+        </h2>
+
+        <p class="email-perfil" id="emailPerfil">
+          mariana@email.com
+        </p>
+
+        <span class="idade">
+          <i class="fa-solid fa-shield-heart"></i>
+          Perfil de responsável
+        </span>
+
+      </div>
+
+      <button
+        type="button"
+        class="botao-secundario botao-editar-perfil"
+        id="abrirEdicaoPerfil"
+      >
+        <i class="fa-solid fa-pen"></i>
+        Editar perfil
+      </button>
+
+    </section>
+
+    <!-- DADOS CADASTRAIS -->
+
+    <section class="secao">
+
+      <div class="secao-cabecalho">
+        <div>
+          <h2 id="tituloDados">
+            <i class="fa-regular fa-id-card"></i>
+            Dados cadastrais
+          </h2>
+
+          <p>Informações utilizadas na sua conta.</p>
+        </div>
+      </div>
+
+      <div class="grade grade-dois">
+
+        <article class="card info-card">
+
+          <span class="icone">
+            <i class="fa-solid fa-user"></i>
+          </span>
+
+          <span class="legenda">Nome completo</span>
+
+          <strong id="dadoNome">
+            Mariana Martins Oliveira
+          </strong>
+
+        </article>
+
+        <article class="card info-card">
+
+          <span class="icone">
+            <i class="fa-regular fa-calendar-days"></i>
+          </span>
+
+          <span class="legenda">Data de nascimento</span>
+
+          <strong id="dadoNascimento">
+            14 de maio de 1998
+          </strong>
+
+        </article>
+
+        <article class="card info-card">
+
+          <span class="icone">
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+
+          <span class="legenda">E-mail</span>
+
+          <strong id="dadoEmail">
+            mariana@email.com
+          </strong>
+
+        </article>
+
+        <article class="card info-card">
+
+          <span class="icone">
+            <i class="fa-solid fa-lock"></i>
+          </span>
+
+          <span class="legenda">Senha</span>
+
+          <div class="senha-visual">
+
+            <strong id="dadoSenha">
+              ••••••••
+            </strong>
+
+            <button
+              type="button"
+              id="alternarSenha"
+              class="botao-olho"
+              aria-label="Mostrar senha"
+            >
+              <i class="fa-regular fa-eye"></i>
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- FORMULÁRIO DE EDIÇÃO DO RESPONSÁVEL -->
+
+    <section
+      class="card formulario-card"
+      id="formularioPerfilCard"
+      hidden
+    >
+
+      <div class="formulario-topo">
+
+        <div>
+          <h2>
+            <i class="fa-solid fa-user-pen"></i>
+            Editar dados cadastrais
+          </h2>
+
+          <p>Altere as informações do seu perfil.</p>
+        </div>
+
+        <button
+          type="button"
+          class="modal-fechar"
+          id="fecharEdicaoPerfil"
+          aria-label="Fechar edição"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+      </div>
+
+      <form id="formPerfil" class="formulario">
+
+        <div class="campo campo-largo">
+          <label for="perfilNome">Nome completo</label>
+
+          <input
+            type="text"
+            id="perfilNome"
+            name="nome"
+            required
+            maxlength="100"
+          >
+        </div>
+
+        <div class="campo">
+          <label for="perfilNascimento">Data de nascimento</label>
+
+          <input
+            type="date"
+            id="perfilNascimento"
+            name="nascimento"
+            required
+          >
+        </div>
+
+        <div class="campo">
+          <label for="perfilEmail">E-mail</label>
+
+          <input
+            type="email"
+            id="perfilEmail"
+            name="email"
+            required
+          >
+        </div>
+
+        <div class="campo campo-largo">
+          <label for="perfilSenha">Senha</label>
+
+          <input
+            type="password"
+            id="perfilSenha"
+            name="senha"
+            minlength="6"
+            required
+            autocomplete="new-password"
+          >
+
+          <small>
+            Use pelo menos 6 caracteres. Esta é uma demonstração sem autenticação real.
+          </small>
+        </div>
+
+        <p
+          class="mensagem-formulario campo-largo"
+          id="mensagemPerfil"
+          role="status"
+          aria-live="polite"
+        ></p>
+
+        <div class="acoes-formulario campo-largo">
+
+          <button
+            type="button"
+            class="botao-cancelar"
+            id="cancelarEdicaoPerfil"
+          >
+            Cancelar
+          </button>
+
+          <button type="submit" class="botao-enviar">
+            <i class="fa-solid fa-check"></i>
+            Salvar alterações
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+    <!-- RESPONSÁVEIS -->
+
+    <section class="card responsaveis">
+
+      <div class="secao-cabecalho">
+        <div>
+          <h2 id="tituloResponsaveis">
+            <i class="fa-solid fa-user-group"></i>
+            Responsáveis
+          </h2>
+
+          <p>
+            Compartilhe o acompanhamento das crianças com outra pessoa.
+          </p>
+        </div>
+      </div>
+
+      <div
+        id="listaResponsaveis"
+        class="lista-responsaveis"
+      ></div>
+
+      <button
+        class="botao-adicionar"
+        id="adicionarResponsavel"
+        type="button"
+      >
+        <i class="fa-solid fa-user-plus"></i>
+        Adicionar responsável
+      </button>
+
+    </section>
+
+    <!-- MINHAS CRIANÇAS -->
+
+    <section class="card criancas">
+
+      <div class="secao-cabecalho">
+
+        <div>
+          <h2 id="tituloCriancas">
+            <i class="fa-solid fa-children"></i>
+            Minhas crianças
+          </h2>
+
+          <p>
+            Cadastre e acompanhe as informações de cada criança.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          class="botao-adicionar botao-adicionar-crianca"
+          id="abrirFormularioCrianca"
+        >
+          <i class="fa-solid fa-plus"></i>
+          Adicionar criança
+        </button>
+
+      </div>
+
+      <div
+        id="listaCriancas"
+        class="lista-criancas"
+      ></div>
+
+      <!-- FORMULÁRIO DE CADASTRO DA CRIANÇA -->
+
+      <section
+        class="formulario-card formulario-crianca"
+        id="formularioCriancaCard"
+        hidden
+      >
+
+        <div class="formulario-topo">
+
+          <div>
+            <h3 id="tituloFormularioCrianca">
+              <i class="fa-solid fa-baby"></i>
+              Nova criança
+            </h3>
+
+            <p>Preencha os dados para criar o perfil.</p>
+          </div>
+
+          <button
+            type="button"
+            class="modal-fechar"
+            id="fecharFormularioCrianca"
+            aria-label="Fechar formulário"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+        </div>
+
+        <form id="formCrianca" class="formulario">
+
+          <input type="hidden" id="criancaId">
+
+          <div class="campo campo-largo">
+            <label for="criancaNome">Nome da criança</label>
+
+            <input
+              type="text"
+              id="criancaNome"
+              name="nome"
+              placeholder="Ex.: Helena Martins Oliveira"
+              required
+              maxlength="100"
+            >
+          </div>
+
+          <div class="campo">
+            <label for="criancaNascimento">Data de nascimento</label>
+
+            <input
+              type="date"
+              id="criancaNascimento"
+              name="nascimento"
+              required
+            >
+          </div>
+
+          <div class="campo">
+            <label for="criancaSexo">Sexo</label>
+
+            <select
+              id="criancaSexo"
+              name="sexo"
+              required
+            >
+              <option value="">Selecione</option>
+              <option value="Feminino">Feminino</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Não informado">Prefiro não informar</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="criancaPeso">Peso (kg)</label>
+
+            <input
+              type="number"
+              id="criancaPeso"
+              name="peso"
+              placeholder="Ex.: 8,2"
+              min="0"
+              max="100"
+              step="0.01"
+            >
+          </div>
+
+          <div class="campo">
+            <label for="criancaAltura">Altura (cm)</label>
+
+            <input
+              type="number"
+              id="criancaAltura"
+              name="altura"
+              placeholder="Ex.: 68"
+              min="0"
+              max="250"
+              step="0.1"
+            >
+          </div>
+
+          <div class="campo campo-largo">
+            <label for="criancaObservacoes">Observações</label>
+
+            <textarea
+              id="criancaObservacoes"
+              name="observacoes"
+              rows="3"
+              placeholder="Informações importantes sobre a criança..."
+            ></textarea>
+          </div>
+
+          <div class="campo campo-largo">
+            <label for="criancaComorbidades">Comorbidades</label>
+
+            <textarea
+              id="criancaComorbidades"
+              name="comorbidades"
+              rows="3"
+              placeholder="Informe comorbidades, alergias ou escreva Nenhuma..."
+            ></textarea>
+          </div>
+
+          <p
+            class="mensagem-formulario campo-largo"
+            id="mensagemCrianca"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <div class="acoes-formulario campo-largo">
+
+            <button
+              type="button"
+              class="botao-cancelar"
+              id="cancelarCrianca"
+            >
+              Cancelar
+            </button>
+
+            <button
+              type="submit"
+              class="botao-enviar"
+              id="salvarCrianca"
+            >
+              <i class="fa-solid fa-check"></i>
+              Salvar criança
+            </button>
+
+          </div>
+
+        </form>
+
+      </section>
+
+    </section>
+
+    <p class="aviso-demo">
+      <i class="fa-solid fa-circle-info"></i>
+      Ambiente demonstrativo: os dados são fictícios e ficam salvos somente neste navegador.
+    </p>
+
+  </main>
+
+  <!-- MODAL PARA ADICIONAR RESPONSÁVEL -->
+
+  <div class="modal-overlay" id="modalConvite" hidden>
+
+    <div
+      class="modal-conteudo"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tituloConvite"
+    >
+
+      <button
+        type="button"
+        class="modal-fechar"
+        id="fecharModal"
+        aria-label="Fechar"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-icone">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+
+      <h2 id="tituloConvite">
+        Adicionar responsável
+      </h2>
+
+      <p class="modal-descricao">
+        Informe o e-mail de quem deseja adicionar para acompanhar as informações das crianças.
+      </p>
+
+      <form id="formConvite">
+
+        <label for="emailResponsavel">
+          E-mail do responsável
+        </label>
+
+        <input
+          type="email"
+          id="emailResponsavel"
+          name="email"
+          placeholder="exemplo@email.com"
+          autocomplete="email"
+          required
+        >
+
+        <p
+          id="mensagemConvite"
+          role="status"
+          aria-live="polite"
+        ></p>
+
+        <button
+          type="submit"
+          class="botao-enviar"
+          id="botaoEnviar"
+        >
+          <i class="fa-solid fa-user-plus"></i>
+          Adicionar responsável
+        </button>
+
+        <button
+          type="button"
+          class="botao-cancelar"
+          id="cancelarConvite"
+        >
+          Cancelar
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <footer class="rodape-perfil">
+    <i class="fa-solid fa-heart"></i>
+    BabyKare — cuidado e informação em cada etapa.
+  </footer>
+
+  <div class="detalheBaixo" aria-hidden="true">
+    <img src="img/Fundo baixo.png" alt="">
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="./perfil.js"></script>
+  <script src="./footer.js"></script>
+  <script src="./emergencia.js"></script>
+
+</body>
+</html>
