@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7f5">
+  <title>Baby Kase — Desenvolvimento infantil</title>
+  <link rel="stylesheet" href="desenvolvimento.css">
+  <link rel="stylesheet" href="footer.css">
+
+  <!-- Biblioteca dos ícones do menu -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+</head>
+<body>
+  <main class="app development-app">
+    <header class="topbar">
+      <button class="icon-btn" id="backBtn" type="button" aria-label="Voltar">←</button>
+      <div class="bell-wrap">
+        <button class="icon-btn" id="notificationBtn" type="button" aria-label="Notificações">♧</button>
+        <span class="notification-dot" aria-hidden="true"></span>
+      </div>
+    </header>
+
+    <section class="hero development-brand" aria-label="Baby Kase">
+      <div class="logo-container">
+        <img class="logo" src="img/logo.png" alt="Baby Kase">
+      </div>
+    </section>
+
+    <section class="section development-screen" id="desenvolvimento">
+      <div class="development-hero">
+        <span class="development-kicker">CRESCER, DESCOBRIR, APRENDER</span>
+        <h2>📈 Desenvolvimento infantil</h2>
+        <p>Acompanhe habilidades e ideias de brincadeiras para cada fase da infância.</p>
+      </div>
+
+      <article class="development-card">
+        <h3>Entendendo os tipos de desenvolvimento</h3>
+        <div class="development-type-grid">
+          <div class="development-type">
+            <span class="development-type-icon">🧸</span>
+            <div>
+              <h4>Motor amplo</h4>
+              <p>Movimentos do corpo todo — sustentar a cabeça, sentar, engatinhar, andar e correr.</p>
+            </div>
+          </div>
+          <div class="development-type">
+            <span class="development-type-icon">🖐️</span>
+            <div>
+              <h4>Motor fino</h4>
+              <p>Movimentos precisos das mãos e dedos — segurar objetos, pegar itens pequenos, desenhar e escrever.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="development-card">
+        <h3>Desenvolvimento por faixa etária</h3>
+        <p class="development-hint">
+          As habilidades abaixo são referências gerais. Deslize horizontalmente na tabela para consultar todas as áreas.
+        </p>
+
+        <div
+          class="development-table-wrap"
+          role="region"
+          aria-label="Tabela de desenvolvimento infantil por faixa etária"
+          tabindex="0"
+        >
+          <table class="development-table">
+            <thead>
+              <tr>
+                <th>Faixa etária</th>
+                <th>Motor amplo</th>
+                <th>Motor fino</th>
+                <th>Linguagem e comunicação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>0–3 meses</th>
+                <td>Movimenta braços e pernas; começa a controlar e levantar a cabeça deitado de barriga para baixo.</td>
+                <td>Mãos fechadas, começam a abrir; leva à boca; acompanha objetos com o olhar.</td>
+                <td>Reage a sons e vozes; faz sons de vogais; sorri em resposta.</td>
+              </tr>
+              <tr>
+                <th>4–6 meses</th>
+                <td>Sustenta bem a cabeça; rola; senta com apoio; se apoia nos braços deitado.</td>
+                <td>Segura objetos; leva à boca; passa de uma mão para outra; alcança.</td>
+                <td>Balbucia; responde a interação com sons e risadas; imita tons.</td>
+              </tr>
+              <tr>
+                <th>7–9 meses</th>
+                <td>Senta sem apoio; desloca-se pelo chão; engatinha; fica em pé com ajuda.</td>
+                <td>Pega com mais precisão; bate objetos; junta; usa dedos com mais habilidade.</td>
+                <td>Responde ao nome; compreende palavras simples; combina sons como “ba-ba”.</td>
+              </tr>
+              <tr>
+                <th>10–12 meses</th>
+                <td>Fica em pé; anda com apoio; pode dar os primeiros passos sozinho.</td>
+                <td>Usa a pinça (polegar + indicador); coloca e tira de caixas; aponta.</td>
+                <td>Primeiras palavras com sentido; responde a gestos e “não”; imita sons.</td>
+              </tr>
+              <tr>
+                <th>1–2 anos</th>
+                <td>Anda com segurança; começa a correr; sobe e desce degraus com ajuda; chuta bola.</td>
+                <td>Empilha blocos; faz rabiscos; folheia livros; usa colher.</td>
+                <td>Compreende instruções simples; combina 2 palavras; nomeia objetos.</td>
+              </tr>
+              <tr>
+                <th>2–3 anos</th>
+                <td>Corre melhor; pula com os dois pés; sobe escadas com autonomia; chuta e arremessa.</td>
+                <td>Desenha linhas e formas; monta peças grandes; usa talheres com mais controle.</td>
+                <td>Fala frases curtas; faz perguntas; conta fatos simples; é compreendido por familiares.</td>
+              </tr>
+              <tr>
+                <th>3–4 anos</th>
+                <td>Corre e muda de direção; equilibra; pedala triciclo; sobe e desce escadas sozinho.</td>
+                <td>Recorta com supervisão; desenha formas reconhecíveis; monta quebra-cabeças.</td>
+                <td>Conta histórias curtas; entende conceitos como grande/pequeno; participa de conversas.</td>
+              </tr>
+              <tr>
+                <th>4–5 anos</th>
+                <td>Melhora coordenação e equilíbrio; salta; brinca de correr e pular.</td>
+                <td>Recorta formas; desenha pessoas e objetos com detalhes; escreve algumas letras.</td>
+                <td>Fala frases longas; explica ideias; entende histórias mais complexas; faz perguntas para saber mais.</td>
+              </tr>
+              <tr>
+                <th>5–6 anos</th>
+                <td>Boa coordenação geral; participa de brincadeiras e atividades físicas.</td>
+                <td>Escreve letras e números; recorta com precisão; desenha com detalhes.</td>
+                <td>Usa vocabulário amplo; conta histórias com começo, meio e fim; brinca com rimas e sons.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="development-note">
+          <strong>💡 Importante</strong>
+          <p>
+            As idades são referências. Cada criança tem seu próprio ritmo — não comparar!
+            Se notar uma diferença muito grande do esperado, procure o pediatra ou neuropediatra.
+          </p>
+        </aside>
+      </article>
+
+      <article class="development-card">
+        <h3>Atividades de estímulo por faixa etária</h3>
+        <p class="development-hint">
+          Ideias simples para brincar, conversar e explorar juntos. Escolha uma faixa etária para ver sugestões.
+        </p>
+
+        <div class="development-activities">
+          <details class="development-age" open>
+            <summary>0–3 meses <span>+</span></summary>
+            <ul>
+              <li>Conversar durante os cuidados.</li>
+              <li>Cantar músicas suaves.</li>
+              <li>Responder aos sons do bebê.</li>
+              <li>Fazer períodos curtos de barriga para baixo, sempre com supervisão.</li>
+              <li>Oferecer objetos de cores e texturas variadas, seguros e adequados à idade.</li>
+            </ul>
+          </details>
+
+          <details class="development-age">
+            <summary>4–6 meses <span>+</span></summary>
+            <ul>
+              <li>Imitar os sons que o bebê faz.</li>
+              <li>Repetir palavras simples.</li>
+              <li>Oferecer brinquedos para alcançar.</li>
+              <li>Brincar de esconder e mostrar objetos.</li>
+            </ul>
+          </details>
+
+          <details class="development-age">
+            <summary>7–9 meses <span>+</span></summary>
+            <ul>
+              <li>Nomear tudo ao redor.</li>
+              <li>Incentivar gestos como tchau.</li>
+              <li>Colocar brinquedos um pouco longe para estimular o deslocamento.</li>
+              <li>Brincar de encaixar e tirar de recipientes seguros.</li>
+            </ul>
+          </details>
+
+          <details class="development-age">
+            <summary>10–12 meses <span>+</span></summary>
+            <ul>
+              <li>Ler livros com figuras.</li>
+              <li>Pedir para repetir palavras, sem pressionar.</li>
+              <li>Oferecer coisas grandes e seguras para empilhar.</li>
+              <li>Brincar de colocar e tirar objetos.</li>
+            </ul>
+          </details>
+
+          <details class="development-age">
+            <summary>1–2 anos <span>+</span></summary>
+            <ul>
+              <li>Ler histórias todos os dias.</li>
+              <li>Nomear cores, animais e objetos.</li>
+              <li>Brincar de correr e chutar bola em local seguro.</li>
+              <li>Rabiscar com materiais adequados à idade e sob supervisão.</li>
+            </ul>
+          </details>
+
+          <details class="development-age">
+            <summary>2–3 anos <span>+</span></summary>
+            <ul>
+              <li>Perguntar sobre a história lida.</li>
+              <li>Cantar com rimas.</li>
+              <li>Criar circuitos de movimento seguros.</li>
+              <li>Desenhar e montar quebra-cabeças simples.</li>
+            </ul>
+          </details>
+
+          <details class="development-age">
+            <summary>3–4 anos <span>+</span></summary>
+            <ul>
+              <li>Pedir para contar o que lembra da história.</li>
+              <li>Brincar de rimas.</li>
+              <li>Propor jogos de equilíbrio.</li>
+              <li>Explorar massinha e recortar com supervisão.</li>
+            </ul>
+          </details>
+
+          <details class="development-age">
+            <summary>4–5 anos <span>+</span></summary>
+            <ul>
+              <li>Incentivar a inventar histórias.</li>
+              <li>Conversar sobre os personagens.</li>
+              <li>Propor brincadeiras que trabalhem coordenação.</li>
+              <li>Desenhar e colorir.</li>
+            </ul>
+          </details>
+
+          <details class="development-age">
+            <summary>5–6 anos <span>+</span></summary>
+            <ul>
+              <li>Propor atividades manuais que exijam precisão.</li>
+              <li>Brincar de jogos em grupo.</li>
+              <li>Incentivar a escrita e a leitura de acordo com o interesse da criança.</li>
+              <li>Conversar sobre ideias e sentimentos.</li>
+            </ul>
+          </details>
+        </div>
+      </article>
+
+      <p class="development-footer-note">
+        Conteúdo educativo para apoiar o acompanhamento do desenvolvimento.
+        Não substitui consultas, avaliações ou orientações de profissionais de saúde.
+      </p>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="footer.js"></script>
+  <script src="desenvolvimento.js"></script>
+  <script src="emergencia.js"></script>
+</body>
+</html>

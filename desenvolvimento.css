@@ -1,0 +1,447 @@
+/* Base independente da tela Desenvolvimento — identidade visual Baby Kase */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #fff7f5;
+  --card: rgba(255, 255, 255, .72);
+  --primary: #d77d64;
+  --primary-dark: #8c3f30;
+  --text: #2d2523;
+  --muted: #6e6562;
+  --line: #edcfc5;
+  --soft: #f8e4de;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4e4df;
+  overflow-x: hidden;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+/* Estrutura principal */
+
+.app.development-app {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 1024px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px 7.5% 120px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 5% 8%, #f4d5cc 0 120px, transparent 121px),
+    radial-gradient(circle at 100% 88%, #f4d5cc 0 90px, transparent 91px),
+    var(--bg);
+}
+
+.development-app::before,
+.development-app::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 250px;
+  height: 250px;
+  border: 2px solid rgba(201, 120, 99, .45);
+  border-radius: 45% 55% 60% 40%;
+  pointer-events: none;
+}
+
+.development-app::before {
+  top: -135px;
+  left: -120px;
+  transform: rotate(-25deg);
+}
+
+.development-app::after {
+  right: -150px;
+  bottom: 100px;
+  transform: rotate(35deg);
+}
+
+/* Cabeçalho */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .72);
+  color: var(--primary-dark);
+  font-size: 34px;
+  transition: .2s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.05);
+  background: #fff;
+}
+
+.bell-wrap {
+  position: relative;
+}
+
+.notification-dot {
+  position: absolute;
+  right: 9px;
+  top: 7px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d64e78;
+}
+
+/* Logo */
+
+.hero.development-brand {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 22px;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Conteúdo */
+
+.section {
+  position: relative;
+  margin-top: 14px;
+}
+
+.development-screen {
+  position: relative;
+  color: var(--text);
+}
+
+.development-hero {
+  padding: 22px 22px 20px;
+  margin-bottom: 16px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 247, 243, .98),
+    rgba(248, 221, 213, .52)
+  );
+}
+
+.development-kicker {
+  color: var(--primary-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.development-hero h2 {
+  margin: 8px 0;
+  color: var(--primary-dark);
+  font-size: clamp(23px, 4vw, 30px);
+}
+
+.development-hero p,
+.development-card p {
+  line-height: 1.6;
+}
+
+.development-hero p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Cartões */
+
+.development-card {
+  margin: 14px 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .72);
+  box-shadow: 0 5px 18px rgba(100, 50, 40, .045);
+}
+
+.development-card h3 {
+  margin: 0 0 14px;
+  color: var(--primary-dark);
+  font-size: 20px;
+}
+
+/* Tipos de desenvolvimento */
+
+.development-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.development-type {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 15px;
+  background: #fff4ef;
+}
+
+.development-type-icon {
+  font-size: 25px;
+}
+
+.development-type h4 {
+  margin: 0 0 5px;
+  color: var(--primary-dark);
+}
+
+.development-type p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Tabela de desenvolvimento */
+
+.development-hint {
+  margin: -4px 0 13px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.development-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.development-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.55;
+  background: rgba(255, 255, 255, .8);
+}
+
+.development-table th,
+.development-table td {
+  padding: 13px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid rgba(237, 207, 197, .55);
+}
+
+.development-table thead th {
+  position: sticky;
+  top: 0;
+  color: var(--primary-dark);
+  background: #f9e5de;
+  font-size: 13px;
+}
+
+.development-table tbody th {
+  min-width: 105px;
+  color: var(--primary-dark);
+  background: #fff7f3;
+  white-space: nowrap;
+}
+
+.development-table tr:last-child th,
+.development-table tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Aviso informativo */
+
+.development-note {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 14px;
+  background: #fff1e7;
+  color: #72564e;
+  line-height: 1.55;
+}
+
+.development-note strong {
+  color: var(--primary-dark);
+}
+
+.development-note p {
+  margin: 6px 0 0;
+}
+
+/* Atividades por faixa etária */
+
+.development-activities {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.development-age {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .65);
+}
+
+.development-age summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--primary-dark);
+  font-weight: 700;
+  background: rgba(248, 221, 213, .38);
+}
+
+.development-age summary::-webkit-details-marker {
+  display: none;
+}
+
+.development-age summary span {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.development-age[open] summary span {
+  transform: rotate(45deg);
+}
+
+.development-age ul {
+  margin: 0;
+  padding: 12px 22px 15px 38px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* Nota final */
+
+.development-footer-note {
+  padding: 6px 5px 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Notificação temporária */
+
+.toast {
+  position: fixed;
+  z-index: 30;
+  left: 50%;
+  bottom: 105px;
+  max-width: calc(100% - 30px);
+  transform: translate(-50%, 30px);
+  opacity: 0;
+  pointer-events: none;
+  padding: 13px 20px;
+  border-radius: 15px;
+  color: white;
+  background: #5b2b23;
+  transition: .25s;
+  text-align: center;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Responsividade */
+
+@media (max-width: 720px) {
+  .app.development-app {
+    width: 100%;
+    padding: 16px 20px 115px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app.development-app {
+    padding: 14px 12px 110px;
+  }
+
+  .icon-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 28px;
+  }
+
+  .logo-container,
+  .logo {
+    width: 170px;
+  }
+
+  .development-hero {
+    padding: 18px 16px;
+  }
+
+  .development-card {
+    padding: 15px 12px;
+  }
+
+  .development-card h3 {
+    font-size: 18px;
+  }
+
+  .development-type-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .development-table {
+    min-width: 790px;
+    font-size: 12px;
+  }
+
+  .development-table th,
+  .development-table td {
+    padding: 11px;
+  }
+}

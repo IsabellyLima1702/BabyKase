@@ -1,0 +1,668 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: rgb(250, 229, 225);
+
+    font-family:
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+
+    color: #54352c;
+
+    overflow-x: hidden;
+
+    padding:
+        40px
+        20px
+        180px;
+}
+
+/* =========================================
+   FUNDO SUPERIOR
+========================================= */
+
+.detalheCima {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 250px;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+.detalheCima img {
+    display: block;
+
+    width: 250px;
+    height: auto;
+}
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.cadastro {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.inputs {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.logo-container {
+
+    width: 200px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+
+.logo {
+
+    display: block;
+
+    width: 200px;
+
+    height: auto;
+
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   FUNDO SUPERIOR
+========================================= */
+
+.detalheCima {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 250px;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+.detalheCima img {
+    display: block;
+
+    width: 250px;
+    height: auto;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.inputs {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.logo-container {
+
+    width: 200px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+
+.logo {
+
+    display: block;
+
+    width: 200px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.campo {
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        Times,
+        serif;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #d77e63;
+}
+
+
+/* =====================================
+   PÁGINA DE MEDIÇÕES
+===================================== */
+
+body {
+    background: #fcf0eb;
+    padding: 20px 15px 110px;
+    color: #49352e;
+}
+
+.medicoes {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* CABEÇALHO */
+
+.topo-medicoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.topo-medicoes h1 {
+    font-size: 21px;
+    font-weight: 600;
+    color: #44332d;
+}
+
+.topo-medicoes button {
+    background: transparent;
+    border: none;
+    color: #a87560;
+    cursor: pointer;
+}
+
+.topo-medicoes svg {
+    width: 25px;
+    height: 25px;
+}
+
+/* ABAS */
+
+.abas {
+    display: flex;
+    padding: 5px;
+    border-radius: 30px;
+    background: #fff8f4;
+    margin-bottom: 20px;
+}
+
+.aba {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    background: transparent;
+    color: #997d6d;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.aba.ativa {
+    background: #cb8065;
+    color: white;
+}
+
+/* BANNER */
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 145px;
+    padding: 15px;
+    background: #f8dfd2;
+    border-radius: 23px;
+    margin-bottom: 20px;
+}
+
+.banner-imagem {
+    font-size: 90px;
+}
+
+.banner-texto {
+    width: 52%;
+    color: #654438;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.banner-texto span {
+    display: block;
+    font-size: 30px;
+    color: #ce8b73;
+    margin-top: 5px;
+}
+
+/* TÍTULO DA SEÇÃO */
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.titulo-secao h2 {
+    font-size: 17px;
+}
+
+.titulo-secao a {
+    color: #b77d65;
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* GRADE DE MEDIÇÕES */
+
+.grade-medicoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* CARDS */
+
+.card-medicao {
+    min-width: 0;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #fffaf7;
+    border: 1px solid #f2e6df;
+    border-radius: 20px;
+    box-shadow: 0 3px 8px rgba(100, 60, 40, .05);
+}
+
+.icone-medicao {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5e2d8;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+.dados-medicao {
+    min-width: 0;
+}
+
+.dados-medicao p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.dados-medicao h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.dados-medicao small {
+    color: #a18e83;
+    font-size: 10px;
+}
+
+/* SELETOR DE CRIANÇA */
+
+.seletor-crianca {
+    width: fit-content;
+    min-width: 145px;
+    margin: 0 auto 15px;
+    padding: 7px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fffaf7;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(100, 60, 40, .06);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4dfd5;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.seletor-crianca select {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #765446;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* BOTÃO ADICIONAR */
+
+.adicionar {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #cb8065;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.adicionar:hover {
+    background: #b96f56;
+}
+
+.adicionar svg {
+    width: 19px;
+}
+
+
+/* CARD DE OBSERVAÇÕES */
+
+.card-observacoes {
+    width: 100%;
+    margin-top: 18px;
+    padding: 20px;
+    background: #fffaf7;
+    border: 1px solid #f2e6df;
+    border-radius: 20px;
+    box-shadow: 0 3px 8px rgba(100, 60, 40, .05);
+}
+
+.titulo-observacoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #bd795f;
+    margin-bottom: 12px;
+}
+
+.titulo-observacoes svg {
+    width: 23px;
+    height: 23px;
+}
+
+.titulo-observacoes h3 {
+    font-size: 18px;
+}
+
+.card-observacoes p {
+    font-size: 13px;
+    color: #92796d;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.card-observacoes textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 13px;
+    border: 1px solid #ead6cc;
+    border-radius: 13px;
+    background: #fff;
+    color: #54352c;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+    outline: none;
+}
+
+.card-observacoes textarea:focus {
+    border-color: #cb8065;
+    box-shadow: 0 0 0 2px rgba(203, 128, 101, .15);
+}
+
+.card-observacoes button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #cb8065;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.card-observacoes button:hover {
+    background: #b96f56;
+}
+
+.card-observacoes button svg {
+    width: 18px;
+}
+
+#mensagemSalvo {
+    display: block;
+    margin-top: 10px;
+    color: #72916b;
+    font-size: 12px;
+}
+
+
+/* CARD CATEGORIA E FAIXA ETÁRIA */
+
+.card-categoria {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 16px;
+    margin-top: 13px;
+    margin-bottom: 18px;
+
+    background: #fffaf7;
+    border: 1px solid #f2e6df;
+    border-radius: 20px;
+
+    text-decoration: none;
+    color: #49352e;
+
+    box-shadow: 0 3px 8px rgba(100, 60, 40, .05);
+
+    transition: .2s;
+}
+
+.card-categoria:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(100, 60, 40, .10);
+}
+
+.categoria-icone {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5e2d8;
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+.categoria-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.categoria-texto h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.categoria-texto p {
+    font-size: 12px;
+    color: #a18e83;
+}
+
+.categoria-seta {
+    font-size: 28px;
+    color: #cb8065;
+    font-weight: bold;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px 100px;
+    }
+
+    .topo-medicoes h1 {
+        font-size: 19px;
+    }
+
+    .banner {
+        min-height: 135px;
+        padding: 10px;
+    }
+
+    .banner-imagem {
+        font-size: 70px;
+    }
+
+    .banner-texto {
+        font-size: 13px;
+    }
+
+    .card-medicao {
+        padding: 12px 9px;
+        gap: 8px;
+        min-height: 95px;
+    }
+
+    .icone-medicao {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .dados-medicao p {
+        font-size: 11px;
+    }
+
+    .dados-medicao h3 {
+        font-size: 16px;
+    }
+
+    .dados-medicao small {
+        font-size: 9px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .grade-medicoes {
+        grid-template-columns: 1fr;
+    }
+
+}

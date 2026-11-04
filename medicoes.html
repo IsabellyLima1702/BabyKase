@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./medicoes.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="emergencia.css">
+
+    <title>Medicoes</title>
+</head>
+
+<body>
+
+    <main class="cadastro">
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+          
+        </div>
+
+    
+<main class="medicoes">
+
+    <!-- CABEÇALHO -->
+    <header class="topo-medicoes">
+        <button class="voltar" type="button">
+            <i data-lucide="arrow-left"></i>
+        </button>
+
+        <h1 id="tituloPagina">Minhas Medições</h1>
+
+        <button class="favorito" type="button">
+            <i data-lucide="heart"></i>
+        </button>
+    </header>
+
+    <!-- ABAS -->
+    <nav class="abas">
+        <button class="aba ativa" data-tipo="maternas">
+            Maternas
+        </button>
+
+        <button class="aba" data-tipo="crianca">
+            Da Criança
+        </button>
+    </nav>
+
+    <!-- MEDIÇÕES MATERNAS -->
+    <section id="maternas" class="conteudo-medicoes">
+
+        <div class="banner">
+            <div class="banner-imagem">🤰</div>
+
+            <div class="banner-texto">
+                <p>
+                    Acompanhe suas medidas e cuide
+                    ainda mais da sua saúde!
+                </p>
+                <span>♡</span>
+            </div>
+        </div>
+
+        <div class="titulo-secao">
+            <h2>Suas medições recentes</h2>
+            <a href="#">Ver histórico ›</a>
+        </div>
+
+        <div class="grade-medicoes" id="gradeMaternas">
+
+        </div>
+
+        
+<!-- CARD DE OBSERVAÇÕES -->
+<div class="card-observacoes">
+
+    <div class="titulo-observacoes">
+        <i data-lucide="notebook-pen"></i>
+        <h3>Observações</h3>
+    </div>
+
+    <p>
+        Registre aqui informações importantes
+        sobre sua saúde e acompanhamento.
+    </p>
+
+    <textarea
+        id="textoObservacoes"
+        placeholder="Escreva suas observações..."
+    ></textarea>
+
+    <button id="salvarObservacoes">
+        <i data-lucide="save"></i>
+        Salvar observações
+    </button>
+
+    <small id="mensagemSalvo"></small>
+
+</div>
+
+
+        <button class="adicionar" data-adicionar="maternas">
+            <i data-lucide="plus"></i>
+            Adicionar Medição
+        </button>
+
+    </section>
+
+
+    <!-- MEDIÇÕES DA CRIANÇA -->
+    <section id="crianca" class="conteudo-medicoes" hidden>
+
+        <!-- SELETOR DE CRIANÇA -->
+        <div class="seletor-crianca">
+
+            <span class="avatar">👶</span>
+
+            <select id="selecionarCrianca">
+                <option value="laura">Laura</option>
+                <option value="pedro">Pedro</option>
+            </select>
+
+        </div>
+
+        <div class="banner banner-crianca">
+
+            <div class="banner-imagem">🧸</div>
+
+            <div class="banner-texto">
+                <p>
+                    Acompanhe o crescimento e
+                    desenvolvimento do seu eterno bebê!
+                </p>
+                <span>♡</span>
+            </div>
+
+        </div>
+
+        <div class="titulo-secao">
+            <h2>Medições recentes</h2>
+            <a href="#">Ver histórico ›</a>
+        </div>
+
+        <div class="grade-medicoes" id="gradeCrianca">
+
+        </div>
+
+        <!-- CARD CATEGORIA E FAIXA ETÁRIA -->
+<a href="desenvolvimento.html" class="card-categoria">
+
+    <div class="categoria-icone">
+        🧸
+    </div>
+
+    <div class="categoria-texto">
+        <h3>Categoria e Faixa Etária</h3>
+        <p>Acompanhe o desenvolvimento infantil</p>
+    </div>
+
+    <div class="categoria-seta">
+        →
+    </div>
+
+</a>
+
+<!-- CARD DE OBSERVAÇÕES -->
+<div class="card-observacoes">
+
+    <div class="titulo-observacoes">
+        <i data-lucide="notebook-pen"></i>
+        <h3>Observações</h3>
+    </div>
+
+    <p>
+        Registre aqui informações importantes
+        sobre sua saúde e acompanhamento.
+    </p>
+
+    <textarea
+        id="textoObservacoes"
+        placeholder="Escreva suas observações..."
+    ></textarea>
+
+    <button id="salvarObservacoes">
+        <i data-lucide="save"></i>
+        Salvar observações
+    </button>
+
+    <small id="mensagemSalvo"></small>
+
+</div>
+
+        <button class="adicionar" data-adicionar="crianca">
+            <i data-lucide="plus"></i>
+            Adicionar Medição
+        </button>
+
+    </section>
+
+</main>
+
+
+    <script src="./medicoes.js"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="footer.js"></script>
+    <script src="emergencia.js"></script>
+
+</body>
+
+</html>
