@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Kase - Área da Mamãe</title>
+  <link rel="stylesheet" href="vacinas.css">
+   <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="emergencia.css">
+</head>
+<body>
+  <main class="app">
+
+    <header class="topbar">
+      <button class="icon-btn" id="backBtn" aria-label="Voltar">←</button>
+      <div class="bell-wrap">
+        <button class="icon-btn" id="notificationBtn" aria-label="Notificações">♧</button>
+        <span class="notification-dot"></span>
+      </div>
+    </header>
+    <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+    </div>
+
+    <section class="hero">
+      
+      <h2>Seja Bem-Vindo! 💕</h2>
+      <p>Aqui você acompanha tudo sobre o desenvolvimento<br>e cuidados do seu bebê.</p>
+    </section>
+
+    <section class="section children-section">
+      <div class="section-heading">
+        <h3>Crianças cadastradas</h3>
+        <button class="primary-btn" id="addChildBtn">＋ Adicionar criança</button>
+      </div>
+
+      <div id="childrenList" class="children-list"></div>
+    </section>
+
+    <section class="section vaccine-redesign" id="vacinas">
+      <div class="tabs vax-tabs" role="group" aria-label="Tipo de vacinação">
+        <button class="tab" data-tab="mother">Vacinas da mãe</button>
+        <button class="tab active" data-tab="baby">Vacinas da criança</button>
+      </div>
+
+      <div class="vax-history-panel">
+        <div class="vax-history-heading">
+          <h3>💉 <span id="vaxHistoryTitle">Vacinas da criança</span></h3>
+          <button class="outline-btn" type="button" id="calendarBtn">Ver calendário completo ›</button>
+        </div>
+        <div class="vax-history-scroll">
+          <table class="vax-history-table">
+            <thead><tr><th>Vacina</th><th>Dose</th><th>Data da aplicação</th><th>Próxima dose</th><th></th></tr></thead>
+            <tbody id="vaxHistoryRows"></tbody>
+          </table>
+        </div>
+        <div class="vax-history-notice">
+          <span aria-hidden="true">ⓘ</span>
+          <div><strong>Mantenha suas vacinas em dia!</strong><p>Os registros abaixo são preenchidos a partir das doses marcadas no calendário. Confira os dados com a caderneta e a equipe de saúde.</p></div>
+          <button type="button" class="outline-btn" id="vaxPendingBtn">Ver vacinas pendentes ›</button>
+        </div>
+      </div>
+      <div class="vax-calendar-details" id="vaxCalendarDetails" hidden>
+        <div class="vax-calendar-header">
+          <h3 id="vaxCalendarTitle">Calendário completo</h3>
+          <button class="outline-btn" type="button" id="vaxCloseCalendar">Fechar calendário ×</button>
+        </div>
+      <div id="babyVaccines" class="vaccine-list baby-vaccine-list">
+        <div class="baby-calendar-intro"><strong>Calendário de vacinação infantil</strong><p>Escolha a idade para consultar as vacinas, o que elas previnem e marque cada dose quando for registrada na caderneta.</p><div class="baby-progress-track"><span id="babyVaccineProgressBar"></span></div><p class="baby-progress-label" id="babyVaccineProgressLabel">0 de 0 doses concluídas</p></div>
+        <div id="babyVaccineCalendar" class="baby-vaccine-calendar"></div>
+        <aside class="baby-vaccine-disclaimer"><strong>Importante:</strong> calendário educativo organizado a partir das informações fornecidas. O Ministério da Saúde atualizou o calendário infantil em 2026; a formulação pneumocócica aos 4 meses e a indicação da dose aos 5 anos dependem do esquema vigente, do histórico vacinal e de critérios específicos. Confirme cada dose com a UBS ou profissional de saúde antes de vacinar. A vacinação entre 6 e 8 meses contra febre amarela é apenas para situações excepcionais, após avaliação de risco-benefício.<p>Fonte para conferência: <a href="https://www.gov.br/saude/pt-br/vacinacao/calendario" target="_blank" rel="noopener noreferrer">Calendário Nacional de Vacinação — Ministério da Saúde</a>.</p></aside>
+      </div>
+
+      <div id="motherVaccines" class="vaccine-list mother-vaccine-list hidden">
+        <article class="mother-vaccine-card" data-vaccine-id="mother-dtpa">
+          <div class="mother-vaccine-top">
+            <div class="vaccine-icon">💉</div>
+            <div class="mother-vaccine-heading"><h4>dTpa — Difteria, Tétano e Coqueluche</h4><p class="mother-vaccine-when">⏰ Quando: a partir da 20ª semana, em toda gestação. Se não tomou, pode ser administrada até 45 dias após o parto, conforme orientação profissional.</p><span class="mother-vaccine-status vaccine-status">Pendente</span></div>
+            <label class="vaccine-check-wrap" title="Marcar dTpa como concluída"><input class="vaccine-check" type="checkbox" aria-label="Marcar dTpa como concluída"><span class="custom-check"></span></label>
+          </div>
+          <div class="mother-vaccine-details"><p><strong>✅ Por que tomar</strong></p><ul><li>Protege contra difteria, tétano e coqueluche.</li><li>Transfere anticorpos pela placenta, ajudando a proteger o bebê nos primeiros meses.</li></ul><p class="risk-title"><strong>⚠️ Se não tomar</strong></p><ul><li>O bebê pode ficar sem essa proteção inicial contra coqueluche, que pode causar complicações graves.</li><li>A mãe e o recém-nascido podem ficar vulneráveis a doenças como tétano e difteria.</li></ul></div>
+        </article>
+
+        <article class="mother-vaccine-card" data-vaccine-id="mother-influenza">
+          <div class="mother-vaccine-top"><div class="vaccine-icon">💉</div><div class="mother-vaccine-heading"><h4>Influenza (gripe)</h4><p class="mother-vaccine-when">⏰ Quando: em qualquer momento da gestação.</p><span class="mother-vaccine-status vaccine-status">Pendente</span></div><label class="vaccine-check-wrap" title="Marcar Influenza como concluída"><input class="vaccine-check" type="checkbox" aria-label="Marcar Influenza como concluída"><span class="custom-check"></span></label></div>
+          <div class="mother-vaccine-details"><p><strong>✅ Por que tomar</strong></p><ul><li>A gestação aumenta o risco de complicações graves da gripe.</li><li>A vacinação também ajuda a proteger o bebê nos primeiros 6 meses de vida.</li></ul><p class="risk-title"><strong>⚠️ Se não tomar</strong></p><ul><li>A gripe pode evoluir com pneumonia, insuficiência respiratória, internação em UTI, parto prematuro e outras complicações.</li><li><strong>Dados informados no material:</strong> 286 gestantes/puérperas com SRAG por influenza e 25 óbitos (2022–2026). Confirme os números em fonte oficial antes de publicar.</li></ul></div>
+        </article>
+
+        <article class="mother-vaccine-card" data-vaccine-id="mother-covid19">
+          <div class="mother-vaccine-top"><div class="vaccine-icon">💉</div><div class="mother-vaccine-heading"><h4>Covid-19</h4><p class="mother-vaccine-when">⏰ Quando: em qualquer momento da gestação; dose atualizada a cada gestação, com intervalo mínimo de 6 meses da última dose, conforme o material fornecido e confirmação do calendário oficial.</p><span class="mother-vaccine-status vaccine-status">Pendente</span></div><label class="vaccine-check-wrap" title="Marcar Covid-19 como concluída"><input class="vaccine-check" type="checkbox" aria-label="Marcar Covid-19 como concluída"><span class="custom-check"></span></label></div>
+          <div class="mother-vaccine-details"><p><strong>✅ Por que tomar</strong></p><ul><li>A gestação aumenta o risco de doença grave por Covid-19.</li><li>Os anticorpos maternos podem ser transferidos para o bebê.</li></ul><p class="risk-title"><strong>⚠️ Se não tomar</strong></p><ul><li>Há risco de complicações graves, hospitalização, ventilação mecânica e possíveis complicações para a gestação.</li><li><strong>Dados informados no material:</strong> 205 casos graves e 21 mortes de gestantes por Covid-19 no Brasil (2022–2026). Confirme os números em fonte oficial antes de publicar.</li></ul></div>
+        </article>
+
+        <article class="mother-vaccine-card" data-vaccine-id="mother-vsr">
+          <div class="mother-vaccine-top"><div class="vaccine-icon">💉</div><div class="mother-vaccine-heading"><h4>VSR — Vírus Sincicial Respiratório <span class="new-vaccine-tag">NOVO</span></h4><p class="mother-vaccine-when">⏰ Quando: a partir da 28ª semana, dose única por gestação, conforme o calendário oficial e a orientação da equipe de saúde.</p><span class="mother-vaccine-status vaccine-status">Pendente</span></div><label class="vaccine-check-wrap" title="Marcar VSR como concluída"><input class="vaccine-check" type="checkbox" aria-label="Marcar VSR como concluída"><span class="custom-check"></span></label></div>
+          <div class="mother-vaccine-details"><p><strong>✅ Por que tomar</strong></p><ul><li>Ajuda a proteger o bebê contra doença respiratória grave, incluindo bronquiolite e pneumonia, nos primeiros meses.</li><li>O material fornecido informa redução superior a 80% nas hospitalizações do bebê por VSR; confirme esse dado em fonte oficial antes de publicar.</li></ul><p class="risk-title"><strong>⚠️ Se não tomar</strong></p><ul><li>O bebê pode ficar sem essa proteção específica contra formas graves de infecção por VSR.</li></ul></div>
+        </article>
+
+        <article class="mother-vaccine-card" data-vaccine-id="mother-hepatiteb">
+          <div class="mother-vaccine-top"><div class="vaccine-icon">💉</div><div class="mother-vaccine-heading"><h4>Hepatite B</h4><p class="mother-vaccine-when">⏰ Quando: conforme o histórico vacinal; completar o esquema se estiver incompleto, seguindo orientação da unidade de saúde.</p><span class="mother-vaccine-status vaccine-status">Pendente</span></div><label class="vaccine-check-wrap" title="Marcar Hepatite B como concluída"><input class="vaccine-check" type="checkbox" aria-label="Marcar Hepatite B como concluída"><span class="custom-check"></span></label></div>
+          <div class="mother-vaccine-details"><p><strong>✅ Por que tomar</strong></p><ul><li>Ajuda a prevenir a infecção pelo vírus da hepatite B e sua transmissão da mãe para o bebê.</li><li>A infecção pode causar doença hepática crônica.</li></ul><p class="risk-title"><strong>⚠️ Se não tomar</strong></p><ul><li>Se houver infecção materna, existe risco de transmissão ao bebê durante o parto.</li></ul></div>
+        </article>
+
+        <article class="mother-vaccine-card" data-vaccine-id="mother-dt">
+          <div class="mother-vaccine-top"><div class="vaccine-icon">💉</div><div class="mother-vaccine-heading"><h4>dT — Difteria e Tétano</h4><p class="mother-vaccine-when">⏰ Quando: conforme o histórico vacinal; completar o esquema recomendado se estiver incompleto.</p><span class="mother-vaccine-status vaccine-status">Pendente</span></div><label class="vaccine-check-wrap" title="Marcar dT como concluída"><input class="vaccine-check" type="checkbox" aria-label="Marcar dT como concluída"><span class="custom-check"></span></label></div>
+          <div class="mother-vaccine-details"><p><strong>✅ Por que tomar</strong></p><ul><li>Ajuda a proteger contra difteria e tétano, conforme a necessidade individual de vacinação.</li></ul><p class="risk-title"><strong>⚠️ Se não tomar</strong></p><ul><li>Se o esquema estiver incompleto, pode haver vulnerabilidade a essas infecções, incluindo risco de tétano materno e neonatal.</li></ul></div>
+        </article>
+
+        <aside class="mother-special-note"><h4>📌 Situações especiais: Febre amarela</h4><p>A vacinação durante a gestação exige avaliação individual de risco e benefício por profissional de saúde, especialmente em áreas com risco de transmissão ou em caso de viagem.</p></aside>
+        <p class="mother-vaccine-disclaimer">Informações educativas adaptadas do material fornecido. Os números e as recomendações do calendário de 2026 devem ser confirmados em fonte oficial do Ministério da Saúde/PNI e com a UBS, pois podem mudar conforme atualizações, histórico vacinal e situação epidemiológica. Não use esta página para decidir sozinha tomar, adiar ou dispensar uma vacina.</p>
+      </div>
+      </div><!-- /vax-calendar-details -->
+    </section>
+
+    <section class="section health-hub" id="saude" hidden>
+      <div class="health-heading">
+        <h2>💗 Saúde</h2>
+        <p>Um cantinho para cuidar da saúde da mamãe e do bebê.</p>
+      </div>
+      <div class="health-options">
+        <button type="button" class="health-option" data-health-open="vacinas">
+          <img src="baby-kase-vacinas.png" alt="" aria-hidden="true">
+          <strong>Vacinas</strong>
+          <span>Acompanhe as vacinas da mãe e do bebê.</span>
+        </button>
+        <button type="button" class="health-option" data-health-open="diario">
+          <img src="bloco-de-anotacoes.png" alt="" aria-hidden="true">
+          <strong>Diário de Consultas</strong>
+          <span>Guarde orientações médicas, medicamentos e cuidados.</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section diary-screen" id="diario" hidden>
+      <button type="button" class="outline-btn health-return" id="diaryBack">← Voltar para Saúde</button>
+      <div class="health-heading">
+        <h2>📝 Diário de Consultas</h2>
+        <p>Registre com carinho as orientações recebidas nas consultas.</p>
+      </div>
+      <div class="diary-panel">
+        <p id="diaryChildName" class="diary-child-label"></p>
+        <form id="diaryForm">
+          <input type="hidden" id="diaryEditId">
+          <div class="diary-fields">
+            <label>Data da consulta<input type="date" id="diaryDate" required></label>
+            <label>Especialidade<input type="text" id="diarySpecialty" placeholder="Ex.: Pediatria"></label>
+            <label class="diary-wide">Profissional de saúde (opcional)<input type="text" id="diaryDoctor" placeholder="Ex.: Dra. Ana"></label>
+            <label class="diary-wide">Orientações médicas<textarea id="diaryGuidance" rows="3" placeholder="O que foi orientado na consulta?"></textarea></label>
+            <label class="diary-wide">Medicamentos receitados<textarea id="diaryMedicines" rows="3" placeholder="Registre conforme a receita: nome, dose e horários"></textarea></label>
+            <label class="diary-wide">Cuidados e observações<textarea id="diaryCare" rows="3" placeholder="Cuidados, alimentação, sintomas e observações"></textarea></label>
+            <label class="diary-wide">PNI/SUS<textarea id="diaryPniSus" rows="2" placeholder="anotações feitas pelo aplicador (a)"></textarea></label>
+            <label class="diary-wide">Local<textarea id="diaryLocation" rows="2" placeholder="anotações feitas pelo aplicador (a)"></textarea></label>
+            <label class="diary-wide">Lote<textarea id="diaryBatch" rows="2" placeholder="anotações feitas pelo aplicador (a)"></textarea></label>
+            <label>Data de retorno (opcional)<input type="date" id="diaryReturn"></label>
+          </div>
+          <div class="diary-actions">
+            <button class="primary-btn" type="submit" id="diarySave">Salvar anotação</button>
+            <button class="outline-btn" type="button" id="diaryCancel" hidden>Cancelar edição</button>
+          </div>
+        </form>
+        <p class="diary-warning">As anotações são pessoais e não substituem a receita ou a orientação do profissional de saúde. Neste protótipo, ficam salvas apenas neste navegador.</p>
+      </div>
+      <h3 class="diary-list-title">Anotações anteriores</h3>
+      <div id="diaryEntries" class="diary-entries"></div>
+    </section>
+
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose">×</button>
+
+      <div id="modalContent">
+        <h2 id="modalTitle">Adicionar criança</h2>
+        <p id="modalText">Preencha os dados abaixo para cadastrar uma criança.</p>
+        <form id="childForm">
+          <input id="childName" type="text" placeholder="Nome da criança" required>
+          <input id="childBirth" type="date" required>
+          <select id="childGender" required>
+            <option value="">Sexo</option>
+            <option>Feminino</option>
+            <option>Masculino</option>
+          </select>
+          <button class="primary-btn" type="submit">Salvar cadastro</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+ <script src="vacinas.js"></script>
+ <script src="https://unpkg.com/lucide@latest"></script>
+ <script src="footer.js"></script>
+ <script src="emergencia.js"></script>
+</body>
+</html>
