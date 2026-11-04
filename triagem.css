@@ -1,0 +1,540 @@
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fbefeb;
+    color: #49352f;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   FUNDO SUPERIOR
+========================================= */
+
+.detalheCima {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 250px;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+.detalheCima img {
+    display: block;
+
+    width: 250px;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 25px 30px 70px;
+    position: relative;
+    z-index: 2;
+}
+/* =================================
+   LOGO
+================================= */
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 340px;
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =================================
+   CABEÇALHO DA PÁGINA
+================================= */
+
+.cabecalho-pagina {
+    margin-bottom: 28px;
+}
+
+.sobretitulo {
+    color: #e57d62;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #a83e1e;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.titulo i {
+    width: 34px;
+    height: 34px;
+    color: #ec766c;
+    fill: #ec766c;
+}
+
+.subtitulo {
+    color: #927c73;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+
+/* =================================
+   CARDS
+================================= */
+
+.card {
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(160, 91, 66, 0.07);
+    margin-bottom: 18px;
+}
+
+
+/* =================================
+   DADOS DO REGISTRO
+================================= */
+
+.registro {
+    min-height: 190px;
+    padding: 28px 35px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    position: relative;
+}
+
+.registro-icone {
+    width: 145px;
+    height: 145px;
+    min-width: 145px;
+    border-radius: 50%;
+    background: #fce6dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d77b5d;
+}
+
+.registro-icone i {
+    width: 82px;
+    height: 82px;
+    stroke-width: 1.8;
+}
+
+.registro-conteudo {
+    flex: 1;
+    min-width: 0;
+}
+
+.registro-conteudo h2 {
+    color: #e77b60;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.registro-informacoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.registro-item {
+    padding: 0 25px;
+    border-right: 2px solid #f3dfd7;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.registro-item:first-child {
+    padding-left: 0;
+}
+
+.registro-item:last-child {
+    border-right: none;
+}
+
+.registro-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #927c73;
+    font-size: 16px;
+}
+
+.registro-label i {
+    width: 25px;
+    height: 25px;
+    color: #e58a6a;
+}
+
+.registro-item strong {
+    font-size: 21px;
+    color: #342b28;
+}
+
+
+/* =================================
+   CLASSIFICAÇÃO DE RISCO
+================================= */
+
+.risco {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 30px;
+    padding: 12px 22px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.risco-ponto {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+.risco.baixo {
+    color: #b64c24;
+    background: #fce5da;
+}
+
+.risco.baixo .risco-ponto {
+    background: #69a477;
+}
+
+.risco.moderado {
+    color: #9b6b19;
+    background: #fff0cc;
+}
+
+.risco.moderado .risco-ponto {
+    background: #e6a638;
+}
+
+.risco.alto {
+    color: #b52f2f;
+    background: #fce0df;
+}
+
+.risco.alto .risco-ponto {
+    background: #d84e4e;
+}
+
+
+/* =================================
+   STATUS DA ORIENTAÇÃO
+================================= */
+
+.status-orientacao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: #e0eee0;
+    color: #405b43;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.status-orientacao i {
+    width: 23px;
+    height: 23px;
+    fill: #6c9b76;
+    color: white;
+}
+
+
+/* =================================
+   BOTÃO IMPRIMIR
+================================= */
+
+.botao-imprimir {
+    position: absolute;
+    top: 28px;
+    right: 25px;
+    border: 1.5px solid #eea58e;
+    border-radius: 25px;
+    background: transparent;
+    color: #b94b27;
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-imprimir:hover {
+    background: #fce5da;
+}
+
+.botao-imprimir i {
+    width: 22px;
+    height: 22px;
+}
+
+
+/* =================================
+   CARDS DE DETALHES
+================================= */
+
+.detalhe-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 25px 35px;
+    min-height: 125px;
+}
+
+.detalhe-icone {
+    width: 95px;
+    height: 95px;
+    min-width: 95px;
+    border-radius: 50%;
+    background: #fce6dd;
+    color: #d66f4c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detalhe-icone i {
+    width: 48px;
+    height: 48px;
+    stroke-width: 1.8;
+}
+
+.detalhe-conteudo {
+    flex: 1;
+}
+
+.detalhe-conteudo h2 {
+    color: #e77b60;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.detalhe-conteudo p {
+    color: #453a36;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   FUNDO INFERIOR
+========================================= */
+
+.detalheBaixo {
+
+    position: fixed;
+
+    bottom: 0;
+
+    right: 0;
+
+    width: 250px;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+.detalheBaixo img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 1000px) {
+
+    .registro {
+        flex-wrap: wrap;
+    }
+
+    .registro-informacoes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .registro-item {
+        border-right: none;
+        border-bottom: 1px solid #f3dfd7;
+        padding: 0 0 15px;
+    }
+
+    .registro-item:last-child {
+        border-bottom: none;
+    }
+
+    .botao-imprimir {
+        position: static;
+        margin-left: auto;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px 16px 50px;
+    }
+
+    .logo {
+        width: 230px;
+    }
+
+    .titulo {
+        font-size: 29px;
+        flex-wrap: wrap;
+    }
+
+    .titulo i {
+        width: 25px;
+        height: 25px;
+    }
+
+    .subtitulo {
+        font-size: 15px;
+    }
+
+    .registro {
+        padding: 22px;
+        gap: 20px;
+    }
+
+    .registro-icone {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+    }
+
+    .registro-icone i {
+        width: 55px;
+        height: 55px;
+    }
+
+    .registro-conteudo {
+        width: 100%;
+    }
+
+    .registro-item strong {
+        font-size: 17px;
+    }
+
+    .registro-label {
+        font-size: 14px;
+    }
+
+    .risco,
+    .status-orientacao {
+        font-size: 14px;
+    }
+
+    .detalhe-card {
+        padding: 20px;
+        gap: 18px;
+        align-items: flex-start;
+    }
+
+    .detalhe-icone {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+
+    .detalhe-icone i {
+        width: 32px;
+        height: 32px;
+    }
+
+    .detalhe-conteudo h2 {
+        font-size: 14px;
+    }
+
+    .detalhe-conteudo p {
+        font-size: 15px;
+    }
+
+    .botao-imprimir {
+        padding: 11px 16px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* =================================
+   IMPRESSÃO
+================================= */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .detalheCima,
+    .detalheBaixo,
+    .botao-imprimir {
+        display: none;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #eee;
+        break-inside: avoid;
+    }
+
+}

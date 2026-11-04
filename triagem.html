@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fbefeb">
+
+  <title>Triagem de Sintomas | BabyKare</title>
+
+  <link rel="stylesheet" href="./triagem.css">
+  <link rel="stylesheet" href="./footer.css">
+  <link rel="stylesheet" href="./emergencia.css">
+
+</head>
+
+<body>
+
+  <!-- DETALHE SUPERIOR -->
+  <header class="detalheCima" aria-hidden="true">
+    <img src="img/Fundo Cima.png" alt="">
+  </header>
+
+  <main class="container">
+
+    <!-- LOGO -->
+    <div class="logo-container">
+      <img class="logo" src="img/logo.png" alt="BabyKare">
+    </div>
+
+    <!-- CABEÇALHO DA PÁGINA -->
+    <div class="cabecalho-pagina">
+
+      <div>
+        <p class="sobretitulo">TRIAGEM</p>
+
+        <h1 class="titulo">
+          Triagem de Sintomas
+          <i data-lucide="heart"></i>
+        </h1>
+
+        <p class="subtitulo">
+          Aqui você encontra o registro da avaliação dos sintomas informados.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- DADOS DO REGISTRO -->
+    <section class="card registro">
+
+      <div class="registro-icone">
+        <i data-lucide="clipboard-list"></i>
+      </div>
+
+      <div class="registro-conteudo">
+
+        <h2>DADOS DO REGISTRO</h2>
+
+        <div class="registro-informacoes">
+
+          <!-- DATA -->
+          <div class="registro-item">
+
+            <span class="registro-label">
+              <i data-lucide="calendar-days"></i>
+              Data do registro
+            </span>
+
+            <strong id="data_registro">
+              14/10/2025 às 16:32
+            </strong>
+
+          </div>
+
+          <!-- CLASSIFICAÇÃO DE RISCO -->
+          <div class="registro-item">
+
+            <span class="registro-label">
+              <i data-lucide="alert-triangle"></i>
+              Classificação de risco
+            </span>
+
+            <span class="risco baixo" id="classificacao_risco">
+              <span class="risco-ponto"></span>
+              Baixo risco
+            </span>
+
+          </div>
+
+          <!-- STATUS DA ORIENTAÇÃO -->
+          <div class="registro-item">
+
+            <span class="registro-label">
+              <i data-lucide="file-text"></i>
+              Status
+            </span>
+
+            <span class="status-orientacao">
+              <i data-lucide="check-circle"></i>
+              Orientação fornecida
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- BOTÃO IMPRIMIR -->
+      <button class="botao-imprimir" onclick="window.print()">
+        <i data-lucide="printer"></i>
+        Imprimir
+      </button>
+
+    </section>
+
+
+    <!-- SINTOMAS -->
+    <section class="card detalhe-card">
+
+      <div class="detalhe-icone">
+        <i data-lucide="baby"></i>
+      </div>
+
+      <div class="detalhe-conteudo">
+
+        <h2>SINTOMAS</h2>
+
+        <p id="sintomas">
+          Febre, tosse e coriza.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ORIENTAÇÃO -->
+    <section class="card detalhe-card">
+
+      <div class="detalhe-icone">
+        <i data-lucide="lightbulb"></i>
+      </div>
+
+      <div class="detalhe-conteudo">
+
+        <h2>ORIENTAÇÃO</h2>
+
+        <p id="orientacao">
+          Mantenha a criança bem hidratada, ofereça líquidos
+          com frequência e monitore a evolução dos sintomas.
+          Caso a febre persista ou haja piora no quadro,
+          procure um serviço de saúde.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- OBSERVAÇÃO -->
+    <section class="card detalhe-card">
+
+      <div class="detalhe-icone">
+        <i data-lucide="message-square"></i>
+      </div>
+
+      <div class="detalhe-conteudo">
+
+        <h2>OBSERVAÇÃO</h2>
+
+        <p id="observacao">
+          Orientação baseada nos sintomas informados.
+          Em caso de dúvidas, procure um profissional de saúde.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- DETALHE INFERIOR -->
+  <div class="detalheBaixo" aria-hidden="true">
+    <img src="img/Fundo baixo.png" alt="">
+  </div>
+
+
+  <!-- ÍCONES -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- SCRIPTS DO SITE -->
+  <script src="./triagem.js"></script>
+  <script src="./footer.js"></script>
+  <script src="./emergencia.js"></script>
+
+</body>
+</html>
