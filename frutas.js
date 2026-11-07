@@ -129,7 +129,7 @@ const semanas = {
         fruta: "melão",
         nomeFruta: "melão",
         tamanho: "Aproximadamente ~47 cm",
-        imagem: "img/melao.png",
+        imagem: "img/melao.webp",
 
         informacoes: [
             {
