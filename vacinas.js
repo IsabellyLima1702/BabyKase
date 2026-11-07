@@ -267,6 +267,7 @@ function renderBabyVaccineCalendar() {
   return `<details class="baby-age-group" ${i<2?"open":""}><summary><span class="baby-age-title">${group.age}</span><span class="baby-age-count">${group.vaccines.length} ${group.vaccines.length===1?"vacina":"vacinas"}</span><span class="baby-age-chevron" aria-hidden="true">⌄</span></summary><div class="baby-age-vaccines">${cards}</div></details>`;
  }).join("");
  renderVaccineStates();
+ createVaccineJustificationFields();
 }
 function updateBabyVaccineProgress(){
  const ids=BABY_VACCINE_CALENDAR.flatMap(g=>g.vaccines.map(v=>v.id));
@@ -313,7 +314,200 @@ function renderVaccineStates() {
     }
     card.classList.toggle("vaccine-taken", taken);
   });
+    updateVaccineJustificationFields();
 }
+
+// ==========================================
+// JUSTIFICATIVA E OBSERVAÇÕES DAS VACINAS
+// ==========================================
+
+const VACCINE_JUSTIFICATION_KEY = "babyKaseVaccineJustifications";
+
+let vaccineJustifications = {};
+
+try {
+  vaccineJustifications = JSON.parse(
+    localStorage.getItem(VACCINE_JUSTIFICATION_KEY) || "{}"
+  ) || {};
+} catch {
+  vaccineJustifications = {};
+}
+
+// Salvar justificativas no navegador
+function saveVaccineJustifications() {
+  localStorage.setItem(
+    VACCINE_JUSTIFICATION_KEY,
+    JSON.stringify(vaccineJustifications)
+  );
+}
+
+// Identificar se o registro pertence à mãe ou à criança
+function getVaccineOwner(card) {
+  return card.closest("#motherVaccines")
+    ? "mother"
+    : getSelectedChild()?.id;
+}
+
+// Criar os campos de justificativa em cada vacina
+function createVaccineJustificationFields() {
+
+  const cards = document.querySelectorAll(
+    "#babyVaccines .baby-vaccine-card, #motherVaccines .mother-vaccine-card"
+  );
+
+  cards.forEach(card => {
+
+    if (card.querySelector(".vaccine-justification")) return;
+
+    const vaccineId = card.dataset.vaccineId;
+
+    if (!vaccineId) return;
+
+    const fields = document.createElement("div");
+
+    fields.className = "vaccine-justification";
+
+    fields.innerHTML = `
+      <div class="justification-divider"></div>
+
+      <div class="justification-heading">
+        <span>📝</span>
+        <div>
+          <h5>Justificativa da vacina</h5>
+          <p>Se a vacina ainda não foi tomada, informe o motivo.</p>
+        </div>
+      </div>
+
+      <label class="justification-label">
+        Por que a vacina não foi tomada?
+        <textarea
+          class="vaccine-justification-input"
+          data-vaccine-field="justification"
+          data-vaccine-id="${vaccineId}"
+          rows="3"
+          placeholder="Ex.: Aguardando orientação médica, criança estava doente, dificuldade de comparecer à UBS..."
+        ></textarea>
+      </label>
+
+      <label class="justification-label">
+        Observações
+        <textarea
+          class="vaccine-observations-input"
+          data-vaccine-field="observations"
+          data-vaccine-id="${vaccineId}"
+          rows="3"
+          placeholder="Adicione outras informações importantes..."
+        ></textarea>
+      </label>
+
+      <span class="justification-saved">
+        ✓ Informações salvas automaticamente
+      </span>
+    `;
+
+    const details = card.querySelector(
+      ".baby-vaccine-details, .mother-vaccine-details"
+    );
+
+    if (details) {
+      details.after(fields);
+    } else {
+      card.appendChild(fields);
+    }
+
+  });
+
+  updateVaccineJustificationFields();
+}
+
+// Atualizar campos conforme o status da vacina
+function updateVaccineJustificationFields() {
+
+  document.querySelectorAll(
+    "#babyVaccines .baby-vaccine-card, #motherVaccines .mother-vaccine-card"
+  ).forEach(card => {
+
+    const owner = getVaccineOwner(card);
+    const vaccineId = card.dataset.vaccineId;
+
+    if (!owner || !vaccineId) return;
+
+    const taken =
+      vaccineStatusByChild[owner]?.[vaccineId] === true;
+
+    const fields = card.querySelector(".vaccine-justification");
+
+    if (!fields) return;
+
+    // Esconde os campos quando a vacina está concluída
+    fields.hidden = taken;
+
+    const saved =
+      vaccineJustifications[owner]?.[vaccineId] || {};
+
+    const justification = fields.querySelector(
+      '[data-vaccine-field="justification"]'
+    );
+
+    const observations = fields.querySelector(
+      '[data-vaccine-field="observations"]'
+    );
+
+    if (justification && document.activeElement !== justification) {
+      justification.value = saved.justification || "";
+    }
+
+    if (observations && document.activeElement !== observations) {
+      observations.value = saved.observations || "";
+    }
+
+  });
+}
+
+// Salvar automaticamente ao preencher os campos
+function handleVaccineJustification(event) {
+
+  const input = event.target.closest(
+    "[data-vaccine-field]"
+  );
+
+  if (!input) return;
+
+  const vaccineId = input.dataset.vaccineId;
+  const field = input.dataset.vaccineField;
+
+  const card = input.closest("[data-vaccine-id]");
+  const owner = getVaccineOwner(card);
+
+  if (!owner || !vaccineId) return;
+
+  if (!vaccineJustifications[owner]) {
+    vaccineJustifications[owner] = {};
+  }
+
+  if (!vaccineJustifications[owner][vaccineId]) {
+    vaccineJustifications[owner][vaccineId] = {
+      justification: "",
+      observations: ""
+    };
+  }
+
+  vaccineJustifications[owner][vaccineId][field] = input.value;
+
+  saveVaccineJustifications();
+}
+
+// Eventos para as vacinas da criança
+$("#babyVaccines").addEventListener(
+  "input",
+  handleVaccineJustification
+);
+
+// Eventos para as vacinas da mãe
+$("#motherVaccines").addEventListener(
+  "input",
+  handleVaccineJustification
+);
 
 function handleVaccineCheck(event, ownerId) {
   if (!event.target.matches(".vaccine-check")) return;

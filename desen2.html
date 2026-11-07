@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marco de Desenvolvimento</title>
+  <link rel="stylesheet" href="desen2.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="emergencia.css">
+
+</head>
+<body>
+  <main class="app">
+
+    <header class="topbar">
+      <button class="icon-btn" id="backBtn" aria-label="Voltar">←</button>
+      <div class="bell-wrap">
+        <button class="icon-btn" id="notificationBtn" aria-label="Notificações">♧</button>
+        <span class="notification-dot"></span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="logo-mark">
+        <main class="cadastro">
+
+        <div class="inputs">
+
+            <div class="logo-container">
+                <img
+                    class="logo"
+                    src="img/logo.png"
+                    alt="Logo"
+                >
+            </div>
+        
+        </div>
+    </section>
+
+    <section class="section children-section">
+      <div class="section-heading">
+        <h3>Crianças cadastradas</h3>
+        <button class="primary-btn" id="addChildBtn">＋ Adicionar criança</button>
+      </div>
+
+      <div id="childrenList" class="children-list"></div>
+    </section>
+
+      <div class="milestones-summary">
+        <div><strong>Marcos do desenvolvimento</strong><small id="milestonesChildAge">Selecione uma criança cadastrada</small></div>
+        <div class="milestones-progress"><span id="milestonesPercent">0%</span><div class="milestones-progress-track"><span id="milestonesProgressBar"></span></div></div>
+      </div>
+      <div id="milestonesCards" class="milestones-cards"></div>
+      <div class="milestones-form-panel">
+        <h3>▤ Registro do marco</h3>
+        <form id="milestonesForm">
+          <label>Marco do desenvolvimento
+            <select id="milestoneChoice" required></select>
+          </label>
+          <div class="milestones-form-grid">
+            <label>Data da conquista<input id="milestoneDate" type="date"></label>
+            <label>Médico / profissional de saúde<input id="milestoneProfessional" type="text" placeholder="Selecione ou informe o profissional"></label>
+          </div>
+          <label>Observações<textarea id="milestoneNotes" rows="3" placeholder="Digite aqui as observações..."></textarea></label>
+          <fieldset class="milestones-status"><legend>Status</legend>
+            <label><input type="radio" name="milestoneStatus" value="concluido"> Concluído</label>
+            <label><input type="radio" name="milestoneStatus" value="andamento" checked> Em andamento</label>
+            <label><input type="radio" name="milestoneStatus" value="atencao"> Atrasado</label>
+          </fieldset>
+          <button type="submit" class="milestones-save">Salvar registro</button>
+          <button type="button" id="milestonesAdd" class="milestones-new">Adicionar novo marco</button>
+        </form>
+      </div>
+      <p class="milestones-note">As idades são referências gerais, não um diagnóstico. Em caso de dúvidas sobre o desenvolvimento, converse com um profissional de saúde.</p>
+    </section>
+
+    <section class="section baby-home-section" id="bebe" hidden>
+      <h2>Área do Bebê</h2>
+      <p>Este espaço será desenvolvido futuramente com conteúdos e ferramentas para acompanhar o bebê.</p>
+    </section>
+
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose">×</button>
+
+      <div id="modalContent">
+        <h2 id="modalTitle">Adicionar criança</h2>
+        <p id="modalText">Preencha os dados abaixo para cadastrar uma criança.</p>
+        <form id="childForm">
+          <input id="childName" type="text" placeholder="Nome da criança" required>
+          <input id="childBirth" type="date" required>
+          <select id="childGender" required>
+            <option value="">Sexo</option>
+            <option>Feminino</option>
+            <option>Masculino</option>
+          </select>
+          <button class="primary-btn" type="submit">Salvar cadastro</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="desen2.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="footer.js"></script>
+  <script src="emergencia.js"></script>
+
+</body>
+</html>
