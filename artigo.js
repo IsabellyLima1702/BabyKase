@@ -12,7 +12,7 @@ const articles = [
 
     {
         title: "Como amamentar seu bebê",
-        category: "Amamentação",
+        category: ["Amamentação", "Mãe"],
         description:
             "Informações gerais sobre amamentação e cuidados durante esse período.",
         image: "./img/amamentacao.jpeg",
@@ -21,7 +21,7 @@ const articles = [
 
     {
         title: "Entendendo o sono do bebê",
-        category: "Sono",
+        category: ["Sono", "Ambos"],
         description:
             "Conheça alguns aspectos importantes sobre o sono durante os primeiros meses.",
         image: "./img/sono.jpg",
@@ -30,7 +30,7 @@ const articles = [
 
     {
         title: "Introdução alimentar",
-        category: "Alimentação",
+        category: ["Alimentação", "Criança"],
         description:
             "Informações gerais sobre a fase de introdução dos alimentos.",
         image: "./img/alimentacao.jpg",
@@ -39,7 +39,7 @@ const articles = [
 
     {
         title: "Cuidados com o recém-nascido",
-        category: "Saúde",
+        category: ["Saúde", "Ambos"],
         description:
             "Veja informações importantes sobre os cuidados básicos com o recém-nascido.",
         image: "./img/cuidados.jpg",
@@ -48,7 +48,7 @@ const articles = [
 
     {
         title: "Vacinação do bebê",
-        category: "Saúde",
+        category: ["Saúde", "Criança"],
         description:
             "Entenda a importância de manter a vacinação da criança atualizada.",
         image: "./img/vacina.jpg",
@@ -57,7 +57,7 @@ const articles = [
 
     {
         title: "Rotina de alimentação",
-        category: "Alimentação",
+        category: ["Alimentação", "Criança"],
         description:
             "Informações para ajudar a compreender a rotina alimentar do bebê.",
         image: "./img/rotina.webp",
@@ -94,8 +94,8 @@ function renderArticles() {
         articles.filter(article => {
 
             const matchesCategory =
-                currentCategory === "Todos" ||
-                article.category === currentCategory;
+            currentCategory === "Todos" ||
+            article.category.includes(currentCategory);
 
 
             const matchesSearch =
@@ -148,9 +148,11 @@ function renderArticles() {
 
             <div class="card-content">
 
-                <span class="category">
-                    ${article.category}
-                </span>
+                <div class="categories">
+                    ${article.category.map(category => `
+                    <span class="category">${category}</span>
+                    `).join("")}
+                </div>
 
                 <h2>
                     ${article.title}

@@ -212,6 +212,25 @@ body {
     border-color: #d58aa0;
 }
 
+/* CATEGORIAS */
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.category {
+    display: inline-block;
+    background-color: #f5dfe7;
+    color: #a44765;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
 
 /* FILTROS */
 
