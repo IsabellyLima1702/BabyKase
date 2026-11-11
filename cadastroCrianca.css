@@ -291,6 +291,13 @@ body {
     max-width: none;
 }
 
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #d77d64;
+  cursor: pointer;
+}
+
 /* ================================================= */
 /* TABLETS E CELULARES */
 /* ================================================= */
